@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets — Lucas Manivit</title>
+  <meta name="description" content="Projets IT de Lucas Manivit — Déploiement, Sécurité, Réseaux, Scripts PowerShell.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">LM<span>.dev</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#skills">Compétences</a></li>
+      <li><a href="index.html#parcours">Parcours</a></li>
+      <li><a href="projects.html" class="active">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <!-- PERSONNALISE ICI — Lien vers ton CV PDF -->
+      <li><a href="https://drive.google.com/file/d/1V28p5-ASsnXo-tvivpk8QhRlg4-nPZ9K/view?usp=sharing" class="nav-cta" target="_blank">CV ↓</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" style="padding-top:8rem">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Projets</span>
+        <h2 class="section-title">Réalisations & Labs</h2>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="infra">Infra & Endpoint</button>
+        <button class="filter-btn" data-filter="reseaux">Réseaux</button>
+        <button class="filter-btn" data-filter="securite">Sécurité</button>
+        <button class="filter-btn" data-filter="scripts">Scripts</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 -->
+        <div class="project-card reveal" data-category="infra">
+          <div class="project-icon">🚀</div>
+          <h3 class="project-title">Déploiement Autopilot Zero-Touch</h3>
+          <p class="project-desc">
+            Mise en place d'un flux SCCM + Intune pour le provisioning automatisé de 10 000+ appareils.
+            Réduction du temps de déploiement de 4h à 45 minutes.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Intune</span>
+            <span class="tag">SCCM</span>
+            <span class="tag">Autopilot</span>
+            <span class="tag">Azure AD</span>
+          </div>
+          <div class="project-links">
+            <!-- PERSONNALISE ICI — Lien GitHub -->
+            <a href="#" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card reveal" data-category="scripts">
+          <div class="project-icon">⚡</div>
+          <h3 class="project-title">Scripts PowerShell Intune / Graph API</h3>
+          <p class="project-desc">
+            Collection de scripts d'automatisation : inventaire matériel, remédiation de compliance,
+            onboarding utilisateurs via Microsoft Graph API.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PowerShell</span>
+            <span class="tag">Graph API</span>
+            <span class="tag">Intune</span>
+            <span class="tag">Automatisation</span>
+          </div>
+          <div class="project-links">
+            <!-- PERSONNALISE ICI — Lien GitHub -->
+            <a href="#" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card reveal" data-category="securite">
+          <div class="project-icon">🔐</div>
+          <h3 class="project-title">Lab Pentest Réseau</h3>
+          <p class="project-desc">
+            Environnement de test offensif sur GNS3/EVE-NG : MITM, VLAN hopping, ARP poisoning.
+            Documentation des attaques et implémentation des défenses.
+          </p>
+          <div class="project-tags">
+            <span class="tag">GNS3</span>
+            <span class="tag">EVE-NG</span>
+            <span class="tag">Pentest</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Kali Linux</span>
+          </div>
+          <div class="project-links">
+            <!-- PERSONNALISE ICI — Lien GitHub -->
+            <a href="#" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card reveal" data-category="reseaux">
+          <div class="project-icon">🌐</div>
+          <h3 class="project-title">Infrastructure Réseau Segmentée</h3>
+          <p class="project-desc">
+            Projet ESIEE-IT : architecture multi-VLAN avec routage inter-VLAN, ACL,
+            DMZ et haute disponibilité. Simulation d'un réseau d'entreprise complet.
+          </p>
+          <div class="project-tags">
+            <span class="tag">VLAN</span>
+            <span class="tag">Routage OSPF</span>
+            <span class="tag">ACL</span>
+            <span class="tag">DMZ</span>
+            <span class="tag">Cisco</span>
+          </div>
+          <div class="project-links">
+            <!-- PERSONNALISE ICI — Lien GitHub -->
+            <a href="#" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project-card reveal" data-category="securite">
+          <div class="project-icon">🛡️</div>
+          <h3 class="project-title">Audit Sécurité Poste de Travail</h3>
+          <p class="project-desc">
+            Script PowerShell d'audit automatisé basé sur les benchmarks CIS :
+            vérification BitLocker, UAC, pare-feu, politiques de mot de passe.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PowerShell</span>
+            <span class="tag">CIS Benchmark</span>
+            <span class="tag">BitLocker</span>
+            <span class="tag">Sécurité</span>
+          </div>
+          <div class="project-links">
+            <!-- PERSONNALISE ICI — Lien GitHub -->
+            <a href="#" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-link">En savoir plus →</a>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="project-card placeholder reveal" data-category="all">
+          <div class="project-icon">🔮</div>
+          <h3 class="project-title">Projet à venir</h3>
+          <p class="project-desc">
+            De nouveaux projets sont en cours de développement.
+            Restez connecté pour les découvrir bientôt !
+          </p>
+          <div class="project-tags">
+            <span class="tag">Coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-text">© 2026 Lucas Manivit — Tous droits réservés</span>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
