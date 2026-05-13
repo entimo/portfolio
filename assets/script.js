@@ -4,49 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Typewriter Effect ---
-  const typewriterEl = document.getElementById('typewriter');
-  if (typewriterEl) {
-    const titles = [
-      'Ingénieur Réseaux & Sécurité',
-      'SCCM/Intune Engineer',
-      'Ingénieur Workstation · Intune · SCCM',
-      'Passionné Cybersécurité & Infrastructure'
-    ];
-    let titleIdx = 0;
-    let charIdx = 0;
-    let deleting = false;
-    const TYPE_SPEED = 50;
-    const DELETE_SPEED = 30;
-    const PAUSE = 1800;
-
-    function typewrite() {
-      const current = titles[titleIdx];
-      if (!deleting) {
-        typewriterEl.textContent = current.slice(0, charIdx + 1);
-        charIdx++;
-        if (charIdx === current.length) {
-          deleting = true;
-          setTimeout(typewrite, PAUSE);
-          return;
-        }
-        setTimeout(typewrite, TYPE_SPEED);
-      } else {
-        typewriterEl.textContent = current.slice(0, charIdx);
-        charIdx--;
-        if (charIdx < 0) {
-          deleting = false;
-          charIdx = 0;
-          titleIdx = (titleIdx + 1) % titles.length;
-          setTimeout(typewrite, 300);
-          return;
-        }
-        setTimeout(typewrite, DELETE_SPEED);
-      }
-    }
-    typewrite();
-  }
-
   // --- Scroll Reveal ---
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
@@ -80,15 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (hamburger && navLinks) {
+    const setOpen = (open) => {
+      hamburger.classList.toggle('open', open);
+      navLinks.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    };
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
+      setOpen(!hamburger.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
+      a.addEventListener('click', () => setOpen(false));
+    });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) setOpen(false);
     });
   }
 
@@ -149,6 +111,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
   if (form && formSuccess) {
+    // Prefill from ?project=slug (links from projects.html)
+    const params = new URLSearchParams(window.location.search);
+    const projectSlug = params.get('project');
+    if (projectSlug) {
+      const projectLabels = {
+        'autopilot': 'Déploiement Autopilot zero-touch',
+        'powershell-graph': 'Scripts PowerShell · Microsoft Graph',
+        'lab-pentest': 'Lab pentest réseau',
+        'infra-reseau': 'Infrastructure réseau segmentée (ESIEE-IT)',
+        'audit-cis': 'Audit sécurité poste de travail'
+      };
+      const label = projectLabels[projectSlug] || projectSlug;
+      const subjectSelect = document.getElementById('subject');
+      const messageField = document.getElementById('message');
+      if (subjectSelect) subjectSelect.value = 'projet';
+      if (messageField && !messageField.value) {
+        messageField.value = `Bonjour Lucas,\n\nJ'aimerais échanger avec vous au sujet du projet « ${label} ».\n\n`;
+      }
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       form.style.display = 'none';
