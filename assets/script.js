@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectSlug = params.get('project');
     if (projectSlug) {
       const projectLabels = {
-        'autopilot': 'Déploiement Autopilot zero-touch',
+        'autopilot': 'Optimisation des processus de déploiement et de provisioning endpoint',
         'powershell-graph': 'Scripts PowerShell · Microsoft Graph',
         'pentest-final': "Tests d'intrusion — Cartographie & Exploitation",
         'ai-endpoint-assistant': "Assistant IA pour endpoint — SCCM / Intune",
@@ -240,6 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ROLES = [
       'Ingénieur SCCM / Intune',
+      'Ingénieur Environnement de Travail',
       'Ingénieur Réseaux & Sécurité',
       'Expert Automatisation & IA',
       'Endpoint Engineering Specialist',
@@ -248,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     if (reduced) {
-      target.textContent = 'Ingénieur SCCM / Intune · Réseaux & Sécurité · Automatisation & IA';
+      target.textContent = 'Ingénieur SCCM / Intune · Environnement de travail · Réseaux & Sécurité · Automatisation & IA';
       return;
     }
 
