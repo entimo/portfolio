@@ -1436,6 +1436,85 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
+   ANIMATIONS (premium polish, low-cost)
+   ============================================ */
+
+/* Scroll progress bar (GPU-accelerated via transform) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-strong) 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  z-index: 1001;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Gradient border that fades in on card hover */
+.expertise-card, .featured-card { position: relative; isolation: isolate; }
+.expertise-card::after, .featured-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(78,162,255,0.35) 35%, transparent 70%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.expertise-card:hover::after, .featured-card:hover::after { opacity: 1; }
+
+/* Micro-bounce sur l'icône au hover */
+.expertise-icon { transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.expertise-card:hover .expertise-icon { transform: translateY(-2px) scale(1.04); }
+
+/* Underline animé sur les liens nav (slide-in) */
+.nav-links a:not(.nav-cta) {
+  position: relative;
+}
+.nav-links a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: width 0.22s ease, left 0.22s ease;
+}
+.nav-links a:not(.nav-cta):hover::after {
+  width: 100%;
+  left: 0;
+}
+/* L'active conserve son trait fixe (déjà défini plus haut), désactive le slide */
+.nav-links a.active::after { left: 0; width: 100%; transition: none; }
+
+/* Fade-in léger des metric chips à l'arrivée */
+.hero-metrics li {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: chip-in 0.45s ease forwards;
+}
+.hero-metrics li:nth-child(1) { animation-delay: 0.10s; }
+.hero-metrics li:nth-child(2) { animation-delay: 0.20s; }
+.hero-metrics li:nth-child(3) { animation-delay: 0.30s; }
+@keyframes chip-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
    Reduced motion (a11y)
    ============================================ */
 @media (prefers-reduced-motion: reduce) {

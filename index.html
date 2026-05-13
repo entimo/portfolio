@@ -31,6 +31,8 @@
 </head>
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- ========== NAV ========== -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">Lucas<span>.Manivit</span></a>
@@ -378,37 +380,37 @@
 
         <article class="featured-card reveal">
           <div class="featured-meta">
-            <span class="featured-tag-domain">IT Automation</span>
-            <span class="featured-status done">En production</span>
+            <span class="featured-tag-domain">Network &amp; Security</span>
+            <span class="featured-status lab">Projet de fin d'études</span>
           </div>
-          <h3 class="featured-title">Boîte à outils PowerShell · Microsoft Graph</h3>
+          <h3 class="featured-title">Tests d'intrusion — Cartographie &amp; exploitation (ESIEE-IT 5ᵉ année)</h3>
 
           <dl class="featured-pso">
-            <div><dt>Problème</dt><dd>Tâches répétitives de gestion d'identités et de compliance Intune, peu traçables.</dd></div>
-            <div><dt>Solution</dt><dd>Modules PowerShell réutilisables : inventaire matériel, remédiation compliance, onboarding utilisateurs via Graph API.</dd></div>
-            <div><dt>Résultat</dt><dd>Heures économisées / semaine, opérations auditables.</dd></div>
+            <div><dt>Problème</dt><dd>Auditer une infrastructure cible inconnue et démontrer les chemins d'attaque exploitables avant un attaquant réel.</dd></div>
+            <div><dt>Solution</dt><dd>Méthodologie complète : reconnaissance, cartographie réseau (Nmap), énumération de services, exploitation, post-exploitation et rédaction d'un rapport pro.</dd></div>
+            <div><dt>Résultat</dt><dd>Rapport final de pentest rendu, vulnérabilités hiérarchisées par criticité &amp; recommandations de remédiation.</dd></div>
           </dl>
 
           <ul class="featured-tags">
-            <li>PowerShell</li><li>Microsoft Graph</li><li>Intune</li><li>Automatisation</li>
+            <li>Nmap</li><li>Metasploit</li><li>Kali Linux</li><li>Wireshark</li><li>OWASP</li>
           </ul>
         </article>
 
         <article class="featured-card reveal">
           <div class="featured-meta">
-            <span class="featured-tag-domain">Network &amp; Security</span>
+            <span class="featured-tag-domain">IT Automation</span>
             <span class="featured-status lab">Lab</span>
           </div>
-          <h3 class="featured-title">Lab pentest réseau · attaques L2 / L3</h3>
+          <h3 class="featured-title">Provisionnement VM Proxmox via Ansible (IaC)</h3>
 
           <dl class="featured-pso">
-            <div><dt>Problème</dt><dd>Comprendre concrètement les angles d'attaque sur un LAN d'entreprise pour mieux les défendre.</dd></div>
-            <div><dt>Solution</dt><dd>Lab GNS3 / EVE-NG : MITM, ARP poisoning, VLAN hopping ; analyse Wireshark ; durcissement et documentation.</dd></div>
-            <div><dt>Résultat</dt><dd>Doc d'attaques + contre-mesures réutilisable en formation.</dd></div>
+            <div><dt>Problème</dt><dd>Création manuelle de VMs sur Proxmox = lent, source d'erreur, non reproductible.</dd></div>
+            <div><dt>Solution</dt><dd>Playbooks Ansible idempotents : déclaratif YAML, modules Proxmox officiels, variables d'inventaire pour cibler des templates.</dd></div>
+            <div><dt>Résultat</dt><dd>Provisioning à 1 commande, environnements reproductibles, base d'une approche Infrastructure-as-Code.</dd></div>
           </dl>
 
           <ul class="featured-tags">
-            <li>GNS3</li><li>EVE-NG</li><li>Wireshark</li><li>Kali Linux</li><li>Hardening</li>
+            <li>Ansible</li><li>Proxmox VE</li><li>YAML</li><li>IaC</li><li>Linux</li>
           </ul>
         </article>
 

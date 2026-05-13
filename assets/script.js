@@ -4,6 +4,59 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Scroll progress bar (GPU via transform scaleX) ---
+  const progressBar = document.querySelector('.scroll-progress');
+  if (progressBar) {
+    let ticking = false;
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      progressBar.style.transform = `scaleX(${ratio})`;
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateProgress();
+  }
+
+  // --- Count-up animation on hero metrics ---
+  const metricValues = document.querySelectorAll('.hero-metric-value');
+  if (metricValues.length && !reduceMotion) {
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+    metricValues.forEach((el) => {
+      const finalText = el.textContent.trim();
+      const match = finalText.match(/^(\D*)([\d\s.,]+)(.*)$/);
+      if (!match) return;
+      const prefix = match[1] || '';
+      const numStr = match[2].replace(/[\s,]/g, '').replace(',', '.');
+      const target = parseFloat(numStr);
+      if (!isFinite(target)) return;
+      const suffix = match[3] || '';
+      const duration = 1100;
+      const format = (n) => {
+        const rounded = target >= 10 ? Math.round(n) : Math.round(n * 10) / 10;
+        return prefix + rounded.toLocaleString('fr-FR').replace(/ /g, ' ') + suffix;
+      };
+      el.textContent = format(0);
+      let start = null;
+      const step = (ts) => {
+        if (start === null) start = ts;
+        const t = Math.min((ts - start) / duration, 1);
+        el.textContent = format(target * easeOut(t));
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = finalText;
+      };
+      // Slight delay so chip fade-in finishes first
+      setTimeout(() => requestAnimationFrame(step), 200);
+    });
+  }
+
   // --- Scroll Reveal ---
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
@@ -118,9 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const projectLabels = {
         'autopilot': 'Déploiement Autopilot zero-touch',
         'powershell-graph': 'Scripts PowerShell · Microsoft Graph',
-        'lab-pentest': 'Lab pentest réseau',
-        'infra-reseau': 'Infrastructure réseau segmentée (ESIEE-IT)',
-        'audit-cis': 'Audit sécurité poste de travail'
+        'pentest-final': "Tests d'intrusion — Cartographie & Exploitation (ESIEE-IT 5ᵉ a.)",
+        'mpls-vpn': 'Backbone MPLS L3VPN — Projet transverse',
+        'ad-secad': 'Active Directory durci — Install, GPO & attaques',
+        'malware-analysis': 'Analyse de malware — Statique, dynamique, obfuscation',
+        'secure-boot': 'Secure Boot UEFI — Windows, Linux & Intune',
+        'proxmox-ansible': 'Provisionnement VM Proxmox via Ansible (IaC)',
+        'openstack': 'OpenStack — Déploiement cloud privé',
+        'audit-cis': 'Audit sécurité poste de travail (CIS Benchmark)'
       };
       const label = projectLabels[projectSlug] || projectSlug;
       const subjectSelect = document.getElementById('subject');

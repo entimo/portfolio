@@ -20,9 +20,11 @@
 </head>
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- ========== NAV ========== -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">LM<span>.dev</span></a>
+    <a href="index.html" class="nav-logo">Lucas<span>.Manivit</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="index.html#skills">Compétences</a></li>
@@ -47,10 +49,11 @@
 
       <div class="project-filters reveal">
         <button class="filter-btn active" data-filter="all">Tous</button>
-        <button class="filter-btn" data-filter="infra">Infra & Endpoint</button>
+        <button class="filter-btn" data-filter="infra">Endpoint &amp; Sécurité OS</button>
         <button class="filter-btn" data-filter="reseaux">Réseaux</button>
-        <button class="filter-btn" data-filter="securite">Sécurité</button>
-        <button class="filter-btn" data-filter="scripts">Scripts</button>
+        <button class="filter-btn" data-filter="securite">Cybersécurité offensive</button>
+        <button class="filter-btn" data-filter="scripts">Automation</button>
+        <button class="filter-btn" data-filter="cloud">Cloud &amp; Virtualisation</button>
       </div>
 
       <div class="projects-grid">
@@ -113,62 +116,63 @@
           </div>
         </div>
 
-        <!-- Projet 3 -->
+        <!-- Projet 3 — Pentest Final ESIEE -->
         <div class="project-card reveal" data-category="securite">
           <div class="project-head">
-            <div class="project-icon" aria-hidden="true">🔐</div>
-            <span class="featured-status lab">Lab</span>
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT 5ᵉ a.</span>
           </div>
-          <h3 class="project-title">Lab Pentest Réseau</h3>
+          <h3 class="project-title">Tests d'intrusion — Cartographie &amp; Exploitation</h3>
           <p class="project-desc">
-            Environnement de test offensif sur GNS3/EVE-NG : MITM, VLAN hopping, ARP poisoning.
-            Documentation des attaques et implémentation des défenses.
+            Projet de fin d'études : audit complet d'une infrastructure cible. Reconnaissance, cartographie Nmap,
+            énumération de services, exploitation et post-exploitation, puis rapport formel avec hiérarchisation
+            CVSS des vulnérabilités et recommandations.
           </p>
           <div class="project-tags">
-            <span class="tag">GNS3</span>
-            <span class="tag">EVE-NG</span>
-            <span class="tag">Pentest</span>
-            <span class="tag">Wireshark</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">Metasploit</span>
             <span class="tag">Kali Linux</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">OWASP</span>
+            <span class="tag">Reporting</span>
           </div>
           <div class="project-links">
-            <!-- TODO Lucas — quand tu publies le repo, remplace par :
-                 <a href="https://github.com/entimo/NOM-DU-REPO" class="project-link" target="_blank" rel="noopener">
-                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                   GitHub
-                 </a> -->
-            <a href="contact.html?project=lab-pentest" class="project-link">
+            <!-- TODO Lucas — quand tu publies le rapport sur GitHub, remplace par :
+                 <a href="https://github.com/entimo/NOM-DU-REPO" class="project-link" target="_blank" rel="noopener">…GitHub…</a> -->
+            <a href="contact.html?project=pentest-final" class="project-link">
               Échanger sur ce projet
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Projet 4 -->
+        <!-- Projet 4 — MPLS VPN équipe -->
         <div class="project-card reveal" data-category="reseaux">
           <div class="project-head">
-            <div class="project-icon" aria-hidden="true">🌐</div>
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="12" cy="12" r="2.5"/><line x1="8.1" y1="7.5" x2="9.9" y2="10.5"/><line x1="15.9" y1="7.5" x2="14.1" y2="10.5"/><line x1="8.1" y1="16.5" x2="9.9" y2="13.5"/><line x1="15.9" y1="16.5" x2="14.1" y2="13.5"/></svg>
+            </div>
             <span class="featured-status academic">Académique · ESIEE-IT</span>
           </div>
-          <h3 class="project-title">Infrastructure Réseau Segmentée</h3>
+          <h3 class="project-title">Backbone MPLS L3VPN — Projet transverse (équipe 3p)</h3>
           <p class="project-desc">
-            Projet ESIEE-IT : architecture multi-VLAN avec routage inter-VLAN, ACL,
-            DMZ et haute disponibilité. Simulation d'un réseau d'entreprise complet.
+            Conception et déploiement d'un backbone opérateur multi-routeurs : MPLS LDP, OSPF côté core,
+            VRF par client, BGP MP-BGP pour le contrôle de plan VPN. Roadmap, configs et rapport livrés
+            en équipe (GR · PR · LM).
           </p>
           <div class="project-tags">
-            <span class="tag">VLAN</span>
-            <span class="tag">Routage OSPF</span>
-            <span class="tag">ACL</span>
-            <span class="tag">DMZ</span>
-            <span class="tag">Cisco</span>
+            <span class="tag">MPLS</span>
+            <span class="tag">LDP</span>
+            <span class="tag">BGP / MP-BGP</span>
+            <span class="tag">OSPF</span>
+            <span class="tag">VRF</span>
+            <span class="tag">Cisco IOS</span>
           </div>
           <div class="project-links">
-            <!-- TODO Lucas — quand tu publies le repo, remplace par :
-                 <a href="https://github.com/entimo/NOM-DU-REPO" class="project-link" target="_blank" rel="noopener">
-                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                   GitHub
-                 </a> -->
-            <a href="contact.html?project=infra-reseau" class="project-link">
+            <!-- TODO Lucas — si tu publies les configs et la roadmap sur GitHub, remplace par un lien GitHub -->
+            <a href="contact.html?project=mpls-vpn" class="project-link">
               Échanger sur ce projet
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -199,6 +203,151 @@
                    GitHub
                  </a> -->
             <a href="contact.html?project=audit-cis" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 6 — Active Directory SecAD -->
+        <div class="project-card reveal" data-category="infra">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 16l9 5 9-5"/><path d="M3 12l9 5 9-5"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title">Active Directory durci — Install, GPO &amp; attaques</h3>
+          <p class="project-desc">
+            Mise en place complète d'un AD : installation, structuration des OU, GPOs de durcissement
+            (LSA Protection, Credential Guard, désactivation NTLMv1). Phase offensive : Kerberoasting,
+            AS-REP roasting, BloodHound. Conclusion : recommandations de remédiation.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Active Directory</span>
+            <span class="tag">GPO</span>
+            <span class="tag">Kerberos</span>
+            <span class="tag">BloodHound</span>
+            <span class="tag">Windows Server</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=ad-secad" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 7 — Analyse de Malware -->
+        <div class="project-card reveal" data-category="securite">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title">Analyse de malware — Statique, dynamique, obfuscation</h3>
+          <p class="project-desc">
+            Reverse engineering sur 3 TPs : analyse statique (PEStudio, strings), dynamique
+            en sandbox isolée (Procmon, Wireshark, Cuckoo) et étude de techniques d'obfuscation
+            &amp; packing (UPX, custom packers).
+          </p>
+          <div class="project-tags">
+            <span class="tag">Reverse engineering</span>
+            <span class="tag">PEStudio</span>
+            <span class="tag">Procmon</span>
+            <span class="tag">Sandbox</span>
+            <span class="tag">UPX</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=malware-analysis" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 8 — Secure Boot UEFI -->
+        <div class="project-card reveal" data-category="infra">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title">Secure Boot UEFI — Windows, Linux &amp; administration Intune</h3>
+          <p class="project-desc">
+            Étude approfondie : chaîne de confiance du firmware, signature des bootloaders,
+            risques (bootkits, evil maid) et administration en parc Intune / OEM.
+            Pertinent direct pour un poste SCCM/Intune Engineer.
+          </p>
+          <div class="project-tags">
+            <span class="tag">UEFI</span>
+            <span class="tag">Secure Boot</span>
+            <span class="tag">Intune</span>
+            <span class="tag">BitLocker</span>
+            <span class="tag">TPM</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=secure-boot" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 9 — Proxmox + Ansible (Automation) -->
+        <div class="project-card reveal" data-category="scripts">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title">Provisionnement VM Proxmox via Ansible (IaC)</h3>
+          <p class="project-desc">
+            Automatisation déclarative : playbooks Ansible idempotents pour créer, cloner et configurer
+            des VMs sur Proxmox VE depuis un inventaire YAML. Base d'une approche
+            Infrastructure-as-Code reproductible.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Ansible</span>
+            <span class="tag">Proxmox VE</span>
+            <span class="tag">YAML</span>
+            <span class="tag">IaC</span>
+            <span class="tag">Linux</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=proxmox-ansible" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 10 — OpenStack -->
+        <div class="project-card reveal" data-category="cloud">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M18 10a5 5 0 00-9.6-1.5A4 4 0 003 12.5 4 4 0 007 17h11a4 4 0 000-8z"/></svg>
+            </div>
+            <span class="featured-status academic">Académique · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title">OpenStack — Déploiement d'un cloud privé</h3>
+          <p class="project-desc">
+            Stand-up d'une infrastructure cloud privée : Keystone (auth), Glance (images),
+            Nova (compute), Neutron (réseau), Horizon (UI). Création des projets, quotas,
+            réseaux internes/externes et instances de validation.
+          </p>
+          <div class="project-tags">
+            <span class="tag">OpenStack</span>
+            <span class="tag">Nova</span>
+            <span class="tag">Neutron</span>
+            <span class="tag">Keystone</span>
+            <span class="tag">Cloud privé</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=openstack" class="project-link">
               Échanger sur ce projet
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
