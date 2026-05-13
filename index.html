@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Manivit — SCCM / Intune Engineer · Ingénieur Réseaux &amp; Sécurité</title>
-  <meta name="description" content="Lucas Manivit — Ingénieur SCCM / Intune en alternance chez SYSTRA (10 000+ endpoints), parcours ingénieur Réseaux &amp; Sécurité à ESIEE-IT (promotion 2026). Expertise : SCCM, Intune, PowerShell, Active Directory, Windows Server, VLAN, VPN, Fortinet, Wireshark, Sentinel One, IA appliquée aux opérations IT.">
+  <title data-i18n="meta.index.title">Lucas Manivit — SCCM / Intune Engineer · Ingénieur Réseaux &amp; Sécurité</title>
+  <meta name="description" data-i18n-content="meta.index.description" content="Lucas Manivit — Ingénieur SCCM / Intune en alternance chez SYSTRA (10 000+ endpoints), parcours ingénieur Réseaux &amp; Sécurité à ESIEE-IT (promotion 2026). Expertise : SCCM, Intune, PowerShell, Active Directory, Windows Server, VLAN, VPN, Fortinet, Wireshark, Sentinel One, IA appliquée aux opérations IT.">
   <meta name="keywords" content="SCCM, Intune, PowerShell, Active Directory, Windows Server, VLAN, VPN, Fortinet, Wireshark, Sentinel One, alternance, ingénieur réseaux sécurité, ESIEE-IT, SYSTRA, endpoint engineering, IA, automation, Lucas Manivit">
   <meta name="author" content="Lucas Manivit">
   <link rel="canonical" href="https://entimo.github.io/portfolio/index.html">
+  <link rel="alternate" hreflang="fr" href="https://entimo.github.io/portfolio/index.html">
+  <link rel="alternate" hreflang="en" href="https://entimo.github.io/portfolio/index.html?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://entimo.github.io/portfolio/index.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lucas Manivit — SCCM / Intune Engineer · Ingénieur Réseaux &amp; Sécurité">
-  <meta property="og:description" content="Ingénieur SCCM/Intune chez SYSTRA — 10 000+ endpoints. Parcours ingénieur Réseaux &amp; Sécurité ESIEE-IT 2026. IA & automation appliquées à l'IT.">
+  <meta property="og:title" data-i18n-content="meta.index.og.title" content="Lucas Manivit — SCCM / Intune Engineer · Ingénieur Réseaux &amp; Sécurité">
+  <meta property="og:description" data-i18n-content="meta.index.og.description" content="Ingénieur SCCM/Intune chez SYSTRA — 10 000+ endpoints. Parcours ingénieur Réseaux &amp; Sécurité ESIEE-IT 2026. IA & automation appliquées à l'IT.">
   <meta property="og:url" content="https://entimo.github.io/portfolio/index.html">
   <meta property="og:image" content="https://entimo.github.io/portfolio/assets/profil.JPG">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lucas Manivit — SCCM / Intune Engineer">
-  <meta name="twitter:description" content="Ingénieur SCCM/Intune · 10 000+ endpoints · Parcours ingénieur Réseaux &amp; Sécurité ESIEE-IT 2026.">
+  <meta name="twitter:title" data-i18n-content="meta.index.twitter.title" content="Lucas Manivit — SCCM / Intune Engineer">
+  <meta name="twitter:description" data-i18n-content="meta.index.twitter.description" content="Ingénieur SCCM/Intune · 10 000+ endpoints · Parcours ingénieur Réseaux &amp; Sécurité ESIEE-IT 2026.">
   <meta name="twitter:image" content="https://entimo.github.io/portfolio/assets/profil.JPG">
 
   <meta name="theme-color" content="#0b0d12">
@@ -31,6 +35,7 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/bg-network.css">
   <link rel="stylesheet" href="assets/premium.css">
+  <script src="assets/i18n.js" defer></script>
   <script src="assets/bg-network.js" defer></script>
 </head>
 <body>
@@ -41,15 +46,21 @@
   <nav class="nav">
     <a href="index.html" class="nav-logo">Lucas<span>.Manivit</span></a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#parcours">Parcours</a></li>
-      <li><a href="projects.html">Projets</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="#parcours" data-i18n="nav.path">Parcours</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav-lang-item">
+        <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle_aria" aria-label="Changer la langue">
+          <button type="button" data-lang="fr" aria-pressed="true" data-i18n-aria="lang.fr_aria" aria-label="Afficher en français">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false" data-i18n-aria="lang.en_aria" aria-label="Switch to English">EN</button>
+        </div>
+      </li>
       <!-- PERSONNALISE ICI — Lien vers ton CV PDF -->
-      <li><a href="CV-Lucas-Manivit.pdf" download class="nav-cta" target="_blank" rel="noopener">CV ↓</a></li>
+      <li><a href="CV-Lucas-Manivit.pdf" download class="nav-cta" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↓</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <button class="nav-hamburger" data-i18n-aria="nav.menu_aria" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -62,65 +73,65 @@
 
           <div class="hero-badge">
             <span class="pulse"></span>
-            Disponible · Ouvert aux opportunités à partir de 09/2026
+            <span data-i18n="hero.badge">Disponible · Ouvert aux opportunités à partir de 09/2026</span>
           </div>
 
           <h1 class="hero-name">Lucas Manivit</h1>
 
           <p class="hero-role hero-role-dynamic" aria-label="Spécialisations de Lucas Manivit">
-            <span class="hero-role-prefix">Profil :</span>
+            <span class="hero-role-prefix" data-i18n="hero.role.prefix">Profil :</span>
             <span id="hero-rotating-role" class="hero-rotating-role" aria-live="polite">Ingénieur SCCM / Intune</span>
             <span class="hero-cursor" aria-hidden="true"></span>
           </p>
-          <p class="hero-role-stack" aria-hidden="true">
+          <p class="hero-role-stack" aria-hidden="true" data-i18n="hero.role.stack">
             SCCM · Intune · Réseaux · Cybersécurité · PowerShell · IA appliquée
           </p>
 
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
             Je déploie, sécurise et automatise des parcs d'endpoints à l'échelle entreprise — en alternance chez SYSTRA, parcours d'ingénieur Réseaux &amp; Sécurité à ESIEE-IT.
           </p>
 
           <ul class="hero-metrics" aria-label="Chiffres clés">
             <li>
               <span class="hero-metric-value">10 000+</span>
-              <span class="hero-metric-label">postes administrés</span>
+              <span class="hero-metric-label" data-i18n="hero.metric1.label">postes administrés</span>
             </li>
             <li>
               <span class="hero-metric-value">~88%</span>
-              <span class="hero-metric-label">temps de déploiement gagné</span>
+              <span class="hero-metric-label" data-i18n="hero.metric2.label">temps de déploiement gagné</span>
             </li>
             <li>
-              <span class="hero-metric-value">3+ ans</span>
-              <span class="hero-metric-label">en IT entreprise</span>
+              <span class="hero-metric-value" data-i18n="hero.metric3.value">3+ ans</span>
+              <span class="hero-metric-label" data-i18n="hero.metric3.label">en IT entreprise</span>
             </li>
           </ul>
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-              Voir mes projets
+              <span data-i18n="hero.cta.projects">Voir mes projets</span>
             </a>
             <!-- PERSONNALISE ICI — Lien vers ton CV PDF -->
             <a href="CV-Lucas-Manivit.pdf" download class="btn btn-outline" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Télécharger mon CV
+              <span data-i18n="hero.cta.cv">Télécharger mon CV</span>
             </a>
           </div>
 
           <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/lucas-manivit/" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/lucas-manivit/" class="social-btn" data-i18n-aria="hero.social.linkedin" data-i18n-title="hero.social.linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="https://github.com/entimo" class="social-btn" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+            <a href="https://github.com/entimo" class="social-btn" data-i18n-aria="hero.social.github" data-i18n-title="hero.social.github" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             </a>
-            <a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit" class="social-btn" aria-label="Email" title="Email">
+            <a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit" class="social-btn" data-i18n-aria="hero.social.email" data-i18n-title="hero.social.email" aria-label="Email" title="Email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
             </a>
-            <a href="tel:+33778785412" class="social-btn" aria-label="Téléphone" title="Téléphone">
+            <a href="tel:+33778785412" class="social-btn" data-i18n-aria="hero.social.phone" data-i18n-title="hero.social.phone" aria-label="Téléphone" title="Téléphone">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             </a>
-            <a href="contact.html" class="social-btn" aria-label="Contact" title="Contact">
+            <a href="contact.html" class="social-btn" data-i18n-aria="hero.social.contact" data-i18n-title="hero.social.contact" aria-label="Contact" title="Contact">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
             </a>
           </div>
@@ -128,7 +139,7 @@
 
         <div class="hero-avatar">
           <div class="avatar-ring">
-            <div class="avatar-inner"><img src="assets/profil.JPG" alt="Photo de Lucas Manivit, SCCM/Intune Engineer chez SYSTRA" width="220" height="220" fetchpriority="high"></div>
+            <div class="avatar-inner"><img src="assets/profil.JPG" data-i18n-alt="hero.avatar.alt" alt="Photo de Lucas Manivit, SCCM/Intune Engineer chez SYSTRA" width="220" height="220" fetchpriority="high"></div>
           </div>
         </div>
       </div>
@@ -139,9 +150,9 @@
   <section class="section section-tight" id="build" aria-labelledby="build-title">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">Ma vision technique</span>
-        <h2 class="section-title" id="build-title">Du poste de travail au backbone — une vision d'architecte infrastructure.</h2>
-        <p class="section-lede">
+        <span class="section-label" data-i18n="build.label">Ma vision technique</span>
+        <h2 class="section-title" id="build-title" data-i18n="build.title">Du poste de travail au backbone — une vision d'architecte infrastructure.</h2>
+        <p class="section-lede" data-i18n="build.lede">
           Je ne déploie pas juste des outils : je conçois des environnements IT qui passent à l'échelle,
           se laissent automatiser et restent défendables sous pression.
         </p>
@@ -152,43 +163,43 @@
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </span>
-          <h3 class="pillar-title">Infrastructure à l'échelle</h3>
-          <p class="pillar-desc">Parcs endpoint, AD/Azure AD et tenants Intune dimensionnés pour grandir sans casser.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar1.title">Infrastructure à l'échelle</h3>
+          <p class="pillar-desc" data-i18n="build.pillar1.desc">Parcs endpoint, AD/Azure AD et tenants Intune dimensionnés pour grandir sans casser.</p>
         </li>
         <li class="pillar reveal-child">
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
           </span>
-          <h3 class="pillar-title">Automatisation des postes</h3>
-          <p class="pillar-desc">PowerShell, Graph API, scripts de conformité — moins de mains sur les postes, plus de signal sur les exceptions.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar2.title">Automatisation des postes</h3>
+          <p class="pillar-desc" data-i18n="build.pillar2.desc">PowerShell, Graph API, scripts de conformité — moins de mains sur les postes, plus de signal sur les exceptions.</p>
         </li>
         <li class="pillar reveal-child">
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 005 15a1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 005 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 5a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09A1.65 1.65 0 0015 5a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019 9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09A1.65 1.65 0 0019.4 15z"/></svg>
           </span>
-          <h3 class="pillar-title">Opérations pilotées par l'IA</h3>
-          <p class="pillar-desc">Agents et modèles de langage branchés au triage d'incidents, à l'analyse de logs et à la rédaction de remédiations.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar3.title">Opérations pilotées par l'IA</h3>
+          <p class="pillar-desc" data-i18n="build.pillar3.desc">Agents et modèles de langage branchés au triage d'incidents, à l'analyse de logs et à la rédaction de remédiations.</p>
         </li>
         <li class="pillar reveal-child">
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
           </span>
-          <h3 class="pillar-title">Environnements entreprise sécurisés</h3>
-          <p class="pillar-desc">Durcissement AD, Sentinel One, Fortinet, conformité CIS — un parc qui résiste autant qu'il sert.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar4.title">Environnements entreprise sécurisés</h3>
+          <p class="pillar-desc" data-i18n="build.pillar4.desc">Durcissement AD, Sentinel One, Fortinet, conformité CIS — un parc qui résiste autant qu'il sert.</p>
         </li>
         <li class="pillar reveal-child">
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h8M6 8v8M18 8v8M8 18h8"/></svg>
           </span>
-          <h3 class="pillar-title">Orchestration de workflows</h3>
-          <p class="pillar-desc">n8n / Make / scripts maison : connecter les outils ITSM, Graph, Slack, mail et données métier.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar5.title">Orchestration de workflows</h3>
+          <p class="pillar-desc" data-i18n="build.pillar5.desc">n8n / Make / scripts maison : connecter les outils ITSM, Graph, Slack, mail et données métier.</p>
         </li>
         <li class="pillar reveal-child">
           <span class="pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </span>
-          <h3 class="pillar-title">Infrastructure-as-Code</h3>
-          <p class="pillar-desc">Ansible, YAML, versionné dans Git — l'infrastructure devient déclarative, reproductible, auditable.</p>
+          <h3 class="pillar-title" data-i18n="build.pillar6.title">Infrastructure-as-Code</h3>
+          <p class="pillar-desc" data-i18n="build.pillar6.desc">Ansible, YAML, versionné dans Git — l'infrastructure devient déclarative, reproductible, auditable.</p>
         </li>
       </ul>
     </div>
@@ -198,79 +209,79 @@
   <section class="section" id="about">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">À propos</span>
-        <h2 class="section-title">Qui suis-je ?</h2>
+        <span class="section-label" data-i18n="about.label">À propos</span>
+        <h2 class="section-title" data-i18n="about.title">Qui suis-je ?</h2>
       </div>
 
       <div class="about-grid">
         <div class="reveal">
-          <p class="about-text">
+          <p class="about-text" data-i18n-html="about.p1">
             Professionnel IT dédié avec une expertise dans la <strong>gestion et la sécurisation d'infrastructures réseaux</strong>,
             l'<strong>automatisation des processus via scripting</strong> et l'<strong>optimisation des performances systèmes</strong>.
           </p>
           <br>
-          <p class="about-text">
+          <p class="about-text" data-i18n-html="about.p2">
             Actuellement en alternance chez <strong>SYSTRA</strong> en tant qu'ingénieur SCCM/Intune, je gère le déploiement
             et le monitoring de plus de <strong>10 000 appareils</strong>. En parallèle, je finalise mon <strong>diplôme d'ingénieur
             Réseaux & Sécurité</strong> à ESIEE-IT (promotion 2026).
           </p>
           <br>
-          <p class="about-text">
+          <p class="about-text" data-i18n-html="about.p3">
             Reconnu pour mon <strong>adaptabilité</strong>, mon <strong>esprit d'équipe</strong> et ma <strong>communication claire</strong>,
             j'excelle dans la résolution de challenges complexes tout en assurant des opérations IT fiables et efficaces.
           </p>
 
           <div class="lang-list" style="margin-top:2rem;">
             <div class="lang-item">
-              <span class="lang-name">Français</span>
+              <span class="lang-name" data-i18n="about.lang.fr">Français</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
-              <span class="lang-level">Natif</span>
+              <span class="lang-level" data-i18n="about.lang.fr.level">Natif</span>
             </div>
             <div class="lang-item">
-              <span class="lang-name">Anglais</span>
+              <span class="lang-name" data-i18n="about.lang.en">Anglais</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:83%"></div></div>
-              <span class="lang-level">TOEIC 835 (2025)</span>
+              <span class="lang-level" data-i18n="about.lang.en.level">TOEIC 835 (2025)</span>
             </div>
             <div class="lang-item">
-              <span class="lang-name">Allemand</span>
+              <span class="lang-name" data-i18n="about.lang.de">Allemand</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:45%"></div></div>
-              <span class="lang-level">Intermédiaire</span>
+              <span class="lang-level" data-i18n="about.lang.de.level">Intermédiaire</span>
             </div>
           </div>
         </div>
 
         <div class="about-info-grid reveal">
           <div class="info-card">
-            <div class="info-card-label">Email</div>
+            <div class="info-card-label" data-i18n="about.info.email">Email</div>
             <div class="info-card-value"><a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit">manivit.lucas@gmail.com</a></div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Téléphone</div>
+            <div class="info-card-label" data-i18n="about.info.phone">Téléphone</div>
             <div class="info-card-value"><a href="tel:+33778785412">07.78.78.54.12</a></div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Localisation</div>
-            <div class="info-card-value">Cergy, 95800</div>
+            <div class="info-card-label" data-i18n="about.info.location">Localisation</div>
+            <div class="info-card-value" data-i18n="about.info.location.value">Cergy, 95800</div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Permis</div>
-            <div class="info-card-value">Catégorie B</div>
+            <div class="info-card-label" data-i18n="about.info.license">Permis</div>
+            <div class="info-card-value" data-i18n="about.info.license.value">Catégorie B</div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Poste actuel</div>
-            <div class="info-card-value">SCCM/Intune Engineer</div>
+            <div class="info-card-label" data-i18n="about.info.role">Poste actuel</div>
+            <div class="info-card-value" data-i18n="about.info.role.value">SCCM/Intune Engineer</div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Entreprise</div>
+            <div class="info-card-label" data-i18n="about.info.company">Entreprise</div>
             <div class="info-card-value">SYSTRA</div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Formation</div>
-            <div class="info-card-value">ESIEE-IT (2023-2026)</div>
+            <div class="info-card-label" data-i18n="about.info.education">Formation</div>
+            <div class="info-card-value" data-i18n="about.info.education.value">ESIEE-IT (2023-2026)</div>
           </div>
           <div class="info-card">
-            <div class="info-card-label">Centres d'intérêt</div>
-            <div class="info-card-value" style="font-size:0.8rem">Cyber · IA · Trading · Sport</div>
+            <div class="info-card-label" data-i18n="about.info.interests">Centres d'intérêt</div>
+            <div class="info-card-value" data-i18n="about.info.interests.value" style="font-size:0.8rem">Cyber · IA · Trading · Sport</div>
           </div>
         </div>
       </div>
@@ -281,8 +292,8 @@
   <section class="section section-tight" id="expertise">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">Cœur d'expertise</span>
-        <h2 class="section-title">Trois domaines, un fil rouge : l'infrastructure à l'échelle.</h2>
+        <span class="section-label" data-i18n="expertise.label">Cœur d'expertise</span>
+        <h2 class="section-title" data-i18n="expertise.title">Trois domaines, un fil rouge : l'infrastructure à l'échelle.</h2>
       </div>
 
       <div class="expertise-grid">
@@ -291,8 +302,8 @@
           <div class="expertise-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/><line x1="8" y1="16" x2="8" y2="20"/><line x1="16" y1="16" x2="16" y2="20"/></svg>
           </div>
-          <h3 class="expertise-title">Ingénierie endpoint</h3>
-          <p class="expertise-desc">
+          <h3 class="expertise-title" data-i18n="expertise.card1.title">Ingénierie endpoint</h3>
+          <p class="expertise-desc" data-i18n="expertise.card1.desc">
             Conception et opération de parcs d'endpoints à l'échelle entreprise — déploiement zero-touch, patching, conformité et monitoring sur des milliers d'appareils.
           </p>
           <ul class="expertise-tags">
@@ -304,8 +315,8 @@
           <div class="expertise-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
-          <h3 class="expertise-title">Réseaux &amp; Cybersécurité</h3>
-          <p class="expertise-desc">
+          <h3 class="expertise-title" data-i18n="expertise.card2.title">Réseaux &amp; Cybersécurité</h3>
+          <p class="expertise-desc" data-i18n="expertise.card2.desc">
             Segmentation réseau, accès distants sécurisés et supervision de menaces — appliqués en labs et en environnement entreprise.
           </p>
           <ul class="expertise-tags">
@@ -317,8 +328,8 @@
           <div class="expertise-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
           </div>
-          <h3 class="expertise-title">Automatisation IT &amp; IA</h3>
-          <p class="expertise-desc">
+          <h3 class="expertise-title" data-i18n="expertise.card3.title">Automatisation IT &amp; IA</h3>
+          <p class="expertise-desc" data-i18n="expertise.card3.desc">
             Industrialisation des tâches IT par scripting et intégration de l'IA appliquée à l'infrastructure — moins d'opérations manuelles, plus de valeur métier.
           </p>
           <ul class="expertise-tags">
@@ -334,9 +345,9 @@
   <section class="section section-tight ai-section" id="ai" aria-labelledby="ai-title">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">IA &amp; Automatisation</span>
-        <h2 class="section-title" id="ai-title">L'IA appliquée aux opérations IT, pas comme un gadget.</h2>
-        <p class="section-lede">
+        <span class="section-label" data-i18n="ai.label">IA &amp; Automatisation</span>
+        <h2 class="section-title" id="ai-title" data-i18n="ai.title">L'IA appliquée aux opérations IT, pas comme un gadget.</h2>
+        <p class="section-lede" data-i18n="ai.lede">
           J'expérimente et déploie des agents, des workflows et des modèles de langage pour faire ce qu'aucun
           runbook ne devrait avoir à décrire à la main — du triage d'incidents au scripting assisté.
         </p>
@@ -349,10 +360,10 @@
             <span class="ai-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
             </span>
-            <span class="ai-card-tag">Agents IA</span>
+            <span class="ai-card-tag" data-i18n="ai.card1.tag">Agents IA</span>
           </div>
-          <h3 class="ai-card-title">Agents IA pour l'exploitation IT</h3>
-          <p class="ai-card-desc">
+          <h3 class="ai-card-title" data-i18n="ai.card1.title">Agents IA pour l'exploitation IT</h3>
+          <p class="ai-card-desc" data-i18n="ai.card1.desc">
             Assistants connectés à Graph API, SCCM, Intune et aux journaux des postes — capables d'analyser
             un incident, de proposer une remédiation PowerShell et de l'exécuter sous contrôle humain.
           </p>
@@ -366,10 +377,10 @@
             <span class="ai-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h8M6 8v8M18 8v8M8 18h8"/></svg>
             </span>
-            <span class="ai-card-tag">Orchestration</span>
+            <span class="ai-card-tag" data-i18n="ai.card2.tag">Orchestration</span>
           </div>
-          <h3 class="ai-card-title">Orchestration de workflows</h3>
-          <p class="ai-card-desc">
+          <h3 class="ai-card-title" data-i18n="ai.card2.title">Orchestration de workflows</h3>
+          <p class="ai-card-desc" data-i18n="ai.card2.desc">
             n8n, Make, scripts maison : pipelines reliant ITSM, Graph, Slack, Notion et bases métiers —
             les outils se parlent, les humains n'ont plus à recopier.
           </p>
@@ -383,10 +394,10 @@
             <span class="ai-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/><line x1="8" y1="16" x2="8" y2="20"/><line x1="16" y1="16" x2="16" y2="20"/></svg>
             </span>
-            <span class="ai-card-tag">Infra augmentée IA</span>
+            <span class="ai-card-tag" data-i18n="ai.card3.tag">Infra augmentée IA</span>
           </div>
-          <h3 class="ai-card-title">Infrastructure augmentée par l'IA</h3>
-          <p class="ai-card-desc">
+          <h3 class="ai-card-title" data-i18n="ai.card3.title">Infrastructure augmentée par l'IA</h3>
+          <p class="ai-card-desc" data-i18n="ai.card3.desc">
             Corrélation KB / CVE / parc, génération de scripts d'audit, suggestion de policies Intune —
             l'IA ne remplace pas l'administrateur, elle compresse le temps de raisonnement.
           </p>
@@ -400,10 +411,10 @@
             <span class="ai-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
             </span>
-            <span class="ai-card-tag">Automatisation des postes</span>
+            <span class="ai-card-tag" data-i18n="ai.card4.tag">Automatisation des postes</span>
           </div>
-          <h3 class="ai-card-title">Automatisation des postes à grande échelle</h3>
-          <p class="ai-card-desc">
+          <h3 class="ai-card-title" data-i18n="ai.card4.title">Automatisation des postes à grande échelle</h3>
+          <p class="ai-card-desc" data-i18n="ai.card4.desc">
             Conformité, onboarding, remédiations, inventaire matériel — chaînés en PowerShell + Graph,
             paramétrés par tenant Intune, instrumentés pour le monitoring.
           </p>
@@ -420,75 +431,75 @@
   <section class="section" id="skills">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">Compétences</span>
-        <h2 class="section-title">Stack technique</h2>
+        <span class="section-label" data-i18n="skills.label">Compétences</span>
+        <h2 class="section-title" data-i18n="skills.title">Stack technique</h2>
       </div>
 
       <div class="skills-categories">
 
         <!-- Endpoint & Déploiement -->
         <div class="reveal">
-          <h3 class="skill-category-title">Endpoint & Déploiement</h3>
+          <h3 class="skill-category-title" data-i18n="skills.cat1">Endpoint & Déploiement</h3>
           <div class="skills-grid reveal-stagger">
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Microsoft Intune</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">SCCM / MECM</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Autopilot</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Active Directory</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">GPO</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Sentinel One</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">PADS4</span><span class="skill-badge-level pratique">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Microsoft Intune</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">SCCM / MECM</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Autopilot</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Active Directory</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">GPO</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Sentinel One</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">PADS4</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
           </div>
         </div>
 
         <!-- Cloud & Infra -->
         <div class="reveal">
-          <h3 class="skill-category-title">Cloud & Infra</h3>
+          <h3 class="skill-category-title" data-i18n="skills.cat2">Cloud & Infra</h3>
           <div class="skills-grid reveal-stagger">
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Azure AD / Entra ID</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Microsoft 365</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">PowerShell</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Hyper-V</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">VMware</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">VirtualBox</span><span class="skill-badge-level pratique">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Azure AD / Entra ID</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Microsoft 365</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">PowerShell</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Hyper-V</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">VMware</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">VirtualBox</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
           </div>
         </div>
 
         <!-- Réseaux -->
         <div class="reveal">
-          <h3 class="skill-category-title">Réseaux</h3>
+          <h3 class="skill-category-title" data-i18n="skills.cat3">Réseaux</h3>
           <div class="skills-grid reveal-stagger">
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">VLAN</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">VPN SSL / IPsec</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">DHCP / DNS</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">TCP/IP</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Fortinet</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Wireshark</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Switching / Routing</span><span class="skill-badge-level pratique">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">VLAN</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">VPN SSL / IPsec</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">DHCP / DNS</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">TCP/IP</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Fortinet</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Wireshark</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Switching / Routing</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
           </div>
         </div>
 
         <!-- Sécurité -->
         <div class="reveal">
-          <h3 class="skill-category-title">Sécurité</h3>
+          <h3 class="skill-category-title" data-i18n="skills.cat4">Sécurité</h3>
           <div class="skills-grid reveal-stagger">
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Firewall Fortinet</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Sentinel One</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">ACL / IDS-IPS</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">RGPD / ANSSI</span><span class="skill-badge-level notions">Notions</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Pentest réseau labo</span><span class="skill-badge-level notions">Notions</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Firewall Fortinet</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Sentinel One</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">ACL / IDS-IPS</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">RGPD / ANSSI</span><span class="skill-badge-level notions" data-i18n="skills.level.notion">Notions</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Pentest réseau labo</span><span class="skill-badge-level notions" data-i18n="skills.level.notion">Notions</span></div>
           </div>
         </div>
 
         <!-- OS & Dev -->
         <div class="reveal">
-          <h3 class="skill-category-title">OS & Dev</h3>
+          <h3 class="skill-category-title" data-i18n="skills.cat5">OS & Dev</h3>
           <div class="skills-grid reveal-stagger">
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Windows Server 2016/2019</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Windows 10/11</span><span class="skill-badge-level maitrise">Maîtrise</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Debian Linux</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Git</span><span class="skill-badge-level pratique">Pratique</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">Python</span><span class="skill-badge-level notions">Notions</span></div>
-            <div class="skill-badge reveal-child"><span class="skill-badge-name">C++ / Java</span><span class="skill-badge-level notions">Notions</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Windows Server 2016/2019</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Windows 10/11</span><span class="skill-badge-level maitrise" data-i18n="skills.level.master">Maîtrise</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Debian Linux</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Git</span><span class="skill-badge-level pratique" data-i18n="skills.level.practice">Pratique</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">Python</span><span class="skill-badge-level notions" data-i18n="skills.level.notion">Notions</span></div>
+            <div class="skill-badge reveal-child"><span class="skill-badge-name">C++ / Java</span><span class="skill-badge-level notions" data-i18n="skills.level.notion">Notions</span></div>
           </div>
         </div>
 
@@ -501,11 +512,11 @@
     <div class="container">
       <div class="reveal projects-header">
         <div>
-          <span class="section-label">Projets</span>
-          <h2 class="section-title">Trois projets représentatifs.</h2>
+          <span class="section-label" data-i18n="projects.label">Projets</span>
+          <h2 class="section-title" data-i18n="projects.title">Trois projets représentatifs.</h2>
         </div>
         <a href="projects.html" class="projects-all-link">
-          Tous les projets
+          <span data-i18n="projects.see_all">Tous les projets</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -514,23 +525,23 @@
 
         <article class="featured-card reveal">
           <div class="featured-meta">
-            <span class="featured-tag-domain">Ingénierie endpoint</span>
-            <span class="featured-status done">Production · SYSTRA</span>
+            <span class="featured-tag-domain" data-i18n="fp1.domain">Ingénierie endpoint</span>
+            <span class="featured-status done" data-i18n="fp1.status">Production · SYSTRA</span>
           </div>
-          <h3 class="featured-title">Optimisation des processus de déploiement et de provisioning endpoint</h3>
+          <h3 class="featured-title" data-i18n="fp1.title">Optimisation des processus de déploiement et de provisioning endpoint</h3>
 
           <dl class="featured-pso">
             <div>
-              <dt>Contexte</dt>
-              <dd>Parc enterprise multi-sites de <strong>10 000+ postes</strong> en environnement hybride <strong>SCCM / Intune</strong> : étapes de provisioning manuelles, workflows hétérogènes, écarts de conformité d'un site à l'autre.</dd>
+              <dt data-i18n="fp1.ctx_label">Contexte</dt>
+              <dd data-i18n-html="fp1.ctx">Parc enterprise multi-sites de <strong>10 000+ postes</strong> en environnement hybride <strong>SCCM / Intune</strong> : étapes de provisioning manuelles, workflows hétérogènes, écarts de conformité d'un site à l'autre.</dd>
             </div>
             <div>
-              <dt>Contribution</dt>
-              <dd>Participation aux workflows de déploiement et de provisioning aux côtés de l'équipe : automatisation <strong>PowerShell</strong> (remédiations, inventaire, onboarding), packaging <strong>Win32</strong>, fiabilisation des étapes <strong>Autopilot</strong>, application de policies Intune, suivi de conformité endpoint et reporting standardisé. Support N2 / N3 sur les incidents de déploiement.</dd>
+              <dt data-i18n="fp1.contrib_label">Contribution</dt>
+              <dd data-i18n-html="fp1.contrib">Participation aux workflows de déploiement et de provisioning aux côtés de l'équipe : automatisation <strong>PowerShell</strong> (remédiations, inventaire, onboarding), packaging <strong>Win32</strong>, fiabilisation des étapes <strong>Autopilot</strong>, application de policies Intune, suivi de conformité endpoint et reporting standardisé. Support N2 / N3 sur les incidents de déploiement.</dd>
             </div>
             <div>
-              <dt>Résultat</dt>
-              <dd><strong>~45 min</strong> de temps de provisioning par poste après optimisation (-88% sur le chemin historique), processus standardisés et déploiements plus fiables sur le périmètre suivi.</dd>
+              <dt data-i18n="fp1.res_label">Résultat</dt>
+              <dd data-i18n-html="fp1.res"><strong>~45 min</strong> de temps de provisioning par poste après optimisation (-88% sur le chemin historique), processus standardisés et déploiements plus fiables sur le périmètre suivi.</dd>
             </div>
           </dl>
 
@@ -541,15 +552,15 @@
 
         <article class="featured-card reveal">
           <div class="featured-meta">
-            <span class="featured-tag-domain">Réseaux &amp; Sécurité</span>
-            <span class="featured-status lab">Projet d'ingénieur — ESIEE-IT</span>
+            <span class="featured-tag-domain" data-i18n="fp2.domain">Réseaux &amp; Sécurité</span>
+            <span class="featured-status lab" data-i18n="fp2.status">Projet d'ingénieur — ESIEE-IT</span>
           </div>
-          <h3 class="featured-title">Tests d'intrusion — Cartographie &amp; exploitation d'infrastructure</h3>
+          <h3 class="featured-title" data-i18n="fp2.title">Tests d'intrusion — Cartographie &amp; exploitation d'infrastructure</h3>
 
           <dl class="featured-pso">
-            <div><dt>Problème</dt><dd>Auditer une infrastructure cible inconnue et démontrer les chemins d'attaque exploitables avant qu'un attaquant réel ne le fasse.</dd></div>
-            <div><dt>Solution</dt><dd>Méthodologie complète : reconnaissance, cartographie réseau (Nmap), énumération de services, exploitation, post-exploitation et rédaction d'un rapport formel.</dd></div>
-            <div><dt>Résultat</dt><dd>Rapport de pentest livré, vulnérabilités hiérarchisées par criticité &amp; plan de remédiation associé.</dd></div>
+            <div><dt data-i18n="fp2.pb_label">Problème</dt><dd data-i18n="fp2.pb">Auditer une infrastructure cible inconnue et démontrer les chemins d'attaque exploitables avant qu'un attaquant réel ne le fasse.</dd></div>
+            <div><dt data-i18n="fp2.sol_label">Solution</dt><dd data-i18n="fp2.sol">Méthodologie complète : reconnaissance, cartographie réseau (Nmap), énumération de services, exploitation, post-exploitation et rédaction d'un rapport formel.</dd></div>
+            <div><dt data-i18n="fp2.res_label">Résultat</dt><dd data-i18n="fp2.res">Rapport de pentest livré, vulnérabilités hiérarchisées par criticité &amp; plan de remédiation associé.</dd></div>
           </dl>
 
           <ul class="featured-tags">
@@ -559,15 +570,15 @@
 
         <article class="featured-card reveal">
           <div class="featured-meta">
-            <span class="featured-tag-domain">Automatisation IT</span>
-            <span class="featured-status lab">Lab</span>
+            <span class="featured-tag-domain" data-i18n="fp3.domain">Automatisation IT</span>
+            <span class="featured-status lab" data-i18n="fp3.status">Lab</span>
           </div>
-          <h3 class="featured-title">Provisionnement VM Proxmox via Ansible (IaC)</h3>
+          <h3 class="featured-title" data-i18n="fp3.title">Provisionnement VM Proxmox via Ansible (IaC)</h3>
 
           <dl class="featured-pso">
-            <div><dt>Problème</dt><dd>Création manuelle de VMs sur Proxmox = lent, source d'erreur, non reproductible.</dd></div>
-            <div><dt>Solution</dt><dd>Playbooks Ansible idempotents : déclaratif YAML, modules Proxmox officiels, variables d'inventaire pour cibler des templates.</dd></div>
-            <div><dt>Résultat</dt><dd>Provisioning à 1 commande, environnements reproductibles, base d'une approche Infrastructure-as-Code.</dd></div>
+            <div><dt data-i18n="fp3.pb_label">Problème</dt><dd data-i18n="fp3.pb">Création manuelle de VMs sur Proxmox = lent, source d'erreur, non reproductible.</dd></div>
+            <div><dt data-i18n="fp3.sol_label">Solution</dt><dd data-i18n="fp3.sol">Playbooks Ansible idempotents : déclaratif YAML, modules Proxmox officiels, variables d'inventaire pour cibler des templates.</dd></div>
+            <div><dt data-i18n="fp3.res_label">Résultat</dt><dd data-i18n="fp3.res">Provisioning à 1 commande, environnements reproductibles, base d'une approche Infrastructure-as-Code.</dd></div>
           </dl>
 
           <ul class="featured-tags">
@@ -583,36 +594,36 @@
   <section class="section" id="parcours">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">Parcours</span>
-        <h2 class="section-title">Expériences & Formation</h2>
+        <span class="section-label" data-i18n="path.label">Parcours</span>
+        <h2 class="section-title" data-i18n="path.title">Expériences & Formation</h2>
       </div>
 
       <div class="timeline">
 
         <!-- EXPERIENCES -->
-        <div class="timeline-section-label reveal">Expériences professionnelles</div>
+        <div class="timeline-section-label reveal" data-i18n="path.work_label">Expériences professionnelles</div>
 
         <div class="timeline-item reveal">
           <div class="timeline-dot filled"></div>
-          <div class="timeline-date">Fév. 2023 — Aujourd'hui</div>
-          <h3 class="timeline-title">SCCM / Intune Engineer</h3>
+          <div class="timeline-date" data-i18n="path.work1.date">Fév. 2023 — Aujourd'hui</div>
+          <h3 class="timeline-title" data-i18n="path.work1.title">SCCM / Intune Engineer</h3>
           <p class="timeline-company">
             <img class="timeline-logo" src="assets/logo-systra.png" alt="" loading="lazy" width="80" height="15">
-            SYSTRA — Alternance
+            <span data-i18n="path.work1.company">SYSTRA — Alternance</span>
           </p>
 
           <ul class="timeline-metrics" aria-label="Résultats clés">
-            <li><strong>10 000+</strong> endpoints managés</li>
-            <li><strong>N2 / N3</strong> support utilisateurs</li>
-            <li><strong>PowerShell</strong> automation</li>
+            <li data-i18n-html="path.work1.metric1"><strong>10 000+</strong> endpoints managés</li>
+            <li data-i18n-html="path.work1.metric2"><strong>N2 / N3</strong> support utilisateurs</li>
+            <li data-i18n-html="path.work1.metric3"><strong>PowerShell</strong> automation</li>
           </ul>
 
           <ul class="timeline-desc">
-            <li>Déploiement, patching et monitoring applicatif sur un parc de 10 000+ appareils Windows.</li>
-            <li>Automatisation des tâches IT en PowerShell (compliance, inventaire, remédiation).</li>
-            <li>Résolution de tickets utilisateurs en niveau N2/N3, escalades coordonnées.</li>
-            <li>Implémentation de PADS4 pour la gestion de contenu dynamique sur écrans.</li>
-            <li>Supervision endpoint avec Sentinel One — détection et triage de vulnérabilités.</li>
+            <li data-i18n="path.work1.bullet1">Déploiement, patching et monitoring applicatif sur un parc de 10 000+ appareils Windows.</li>
+            <li data-i18n="path.work1.bullet2">Automatisation des tâches IT en PowerShell (compliance, inventaire, remédiation).</li>
+            <li data-i18n="path.work1.bullet3">Résolution de tickets utilisateurs en niveau N2/N3, escalades coordonnées.</li>
+            <li data-i18n="path.work1.bullet4">Implémentation de PADS4 pour la gestion de contenu dynamique sur écrans.</li>
+            <li data-i18n="path.work1.bullet5">Supervision endpoint avec Sentinel One — détection et triage de vulnérabilités.</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Intune</span>
@@ -626,13 +637,13 @@
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Sept. 2022 — Déc. 2022</div>
-          <h3 class="timeline-title">Support IT</h3>
+          <div class="timeline-date" data-i18n="path.work2.date">Sept. 2022 — Déc. 2022</div>
+          <h3 class="timeline-title" data-i18n="path.work2.title">Support IT</h3>
           <p class="timeline-company">AGSI</p>
           <ul class="timeline-desc">
-            <li>Support hardware/software PC & Mac, tickets incidents</li>
-            <li>Diagnostic, résolution d'incidents, récupération de données</li>
-            <li>Configuration VPN & firewalls pour la sécurité client</li>
+            <li data-i18n="path.work2.bullet1">Support hardware/software PC & Mac, tickets incidents</li>
+            <li data-i18n="path.work2.bullet2">Diagnostic, résolution d'incidents, récupération de données</li>
+            <li data-i18n="path.work2.bullet3">Configuration VPN & firewalls pour la sécurité client</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Support N1/N2</span>
@@ -645,16 +656,16 @@
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Fév. 2022 — Mars 2022</div>
-          <h3 class="timeline-title">Administrateur Réseaux (Stage)</h3>
+          <div class="timeline-date" data-i18n="path.work3.date">Fév. 2022 — Mars 2022</div>
+          <h3 class="timeline-title" data-i18n="path.work3.title">Administrateur Réseaux (Stage)</h3>
           <p class="timeline-company">
             <img class="timeline-logo" src="assets/logo-systra.png" alt="" loading="lazy" width="80" height="15">
             SYSTRA
           </p>
           <ul class="timeline-desc">
-            <li>Déploiement environnements réseau sécurisés (Fortinet, SSL/IPsec VPN)</li>
-            <li>Infrastructure Active Directory avec GPOs</li>
-            <li>Configuration VLANs & segmentation LAN</li>
+            <li data-i18n="path.work3.bullet1">Déploiement environnements réseau sécurisés (Fortinet, SSL/IPsec VPN)</li>
+            <li data-i18n="path.work3.bullet2">Infrastructure Active Directory avec GPOs</li>
+            <li data-i18n="path.work3.bullet3">Configuration VLANs & segmentation LAN</li>
           </ul>
           <div class="timeline-tags">
             <span class="tag">Fortinet</span>
@@ -666,42 +677,42 @@
         </div>
 
         <!-- FORMATION -->
-        <div class="timeline-section-label reveal" style="margin-top:2.5rem">Formation</div>
+        <div class="timeline-section-label reveal" data-i18n="path.edu_label" style="margin-top:2.5rem">Formation</div>
 
         <div class="timeline-item reveal">
           <div class="timeline-dot filled"></div>
-          <div class="timeline-date">2023 — 2026</div>
-          <h3 class="timeline-title">Ingénieur Réseaux &amp; Sécurité</h3>
+          <div class="timeline-date" data-i18n="path.edu1.date">2023 — 2026</div>
+          <h3 class="timeline-title" data-i18n="path.edu1.title">Ingénieur Réseaux &amp; Sécurité</h3>
           <p class="timeline-company">
             <img class="timeline-logo" src="assets/logo-esiee-it.png" alt="" loading="lazy" width="64" height="20">
             ESIEE-IT, Pontoise
           </p>
           <ul class="timeline-desc">
-            <li>Sécurisation des infrastructures IT</li>
-            <li>Architecture système & supervision réseau</li>
+            <li data-i18n="path.edu1.bullet1">Sécurisation des infrastructures IT</li>
+            <li data-i18n="path.edu1.bullet2">Architecture système & supervision réseau</li>
           </ul>
         </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2022 — 2023</div>
-          <h3 class="timeline-title">Licence Informatique (alternance)</h3>
+          <div class="timeline-date" data-i18n="path.edu2.date">2022 — 2023</div>
+          <h3 class="timeline-title" data-i18n="path.edu2.title">Licence Informatique (alternance)</h3>
           <p class="timeline-company">
             <img class="timeline-logo" src="assets/logo-esiee-it.png" alt="" loading="lazy" width="64" height="20">
             Le CNAM / ESIEE-IT, Pontoise
           </p>
           <ul class="timeline-desc">
-            <li>Gestion de projet IT, sécurité des systèmes d'information</li>
+            <li data-i18n="path.edu2.bullet1">Gestion de projet IT, sécurité des systèmes d'information</li>
           </ul>
         </div>
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">2020 — 2022</div>
-          <h3 class="timeline-title">BTS SIO — option SISR</h3>
+          <div class="timeline-date" data-i18n="path.edu3.date">2020 — 2022</div>
+          <h3 class="timeline-title" data-i18n="path.edu3.title">BTS SIO — option SISR</h3>
           <p class="timeline-company">ENSITECH, Cergy</p>
           <ul class="timeline-desc">
-            <li>Virtualisation, sécurité système & réseau (RGPD, ANSSI, CNIL)</li>
+            <li data-i18n="path.edu3.bullet1">Virtualisation, sécurité système & réseau (RGPD, ANSSI, CNIL)</li>
           </ul>
         </div>
 
@@ -713,18 +724,18 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <span class="footer-text">© 2026 Lucas Manivit — Tous droits réservés</span>
+        <span class="footer-text" data-i18n="footer.rights">© 2026 Lucas Manivit — Tous droits réservés</span>
         <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
   <!-- Scroll to top -->
-  <button class="scroll-top" aria-label="Retour en haut">
+  <button class="scroll-top" data-i18n-aria="footer.scrolltop_aria" aria-label="Retour en haut">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 

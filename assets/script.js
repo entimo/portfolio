@@ -232,13 +232,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Rotating hero role: typewriter effect ---
-  // Cycles through a list of role titles. Respects prefers-reduced-motion
-  // by displaying a static composite label and skipping the animation.
+  // Reads the active roles list from window.__portfolioRoles (set by i18n.js).
+  // Falls back to FR roles if i18n.js failed to load. Respects
+  // prefers-reduced-motion by showing the i18n fallback string and skipping
+  // the typewriter loop. Listens to "i18n:lang-changed" so a language switch
+  // mid-cycle picks up the new roles list on the next role.
   function rotateHeroRoles(reduced) {
     const target = document.getElementById('hero-rotating-role');
     if (!target) return;
 
-    const ROLES = [
+    const FALLBACK_ROLES = [
       'Ingénieur SCCM / Intune',
       'Ingénieur Environnement de Travail',
       'Ingénieur Réseaux & Sécurité',
@@ -247,16 +250,26 @@ document.addEventListener('DOMContentLoaded', () => {
       'AI-Enhanced IT Operations',
       'Infrastructure & Cybersecurity Engineer'
     ];
+    const FALLBACK_REDUCED = 'Ingénieur SCCM / Intune · Environnement de travail · Réseaux & Sécurité · Automatisation & IA';
+
+    function getRoles() {
+      return (window.__portfolioRoles && window.__portfolioRoles.length)
+        ? window.__portfolioRoles
+        : FALLBACK_ROLES;
+    }
 
     if (reduced) {
-      target.textContent = 'Ingénieur SCCM / Intune · Environnement de travail · Réseaux & Sécurité · Automatisation & IA';
+      target.textContent = window.__portfolioRotatorFallback || FALLBACK_REDUCED;
+      window.addEventListener('i18n:lang-changed', function (e) {
+        target.textContent = (e.detail && e.detail.fallback) || FALLBACK_REDUCED;
+      });
       return;
     }
 
-    const TYPE_SPEED = 45;     // ms per char (type)
-    const DELETE_SPEED = 25;   // ms per char (delete)
-    const HOLD_FULL = 1400;    // ms hold after full word
-    const HOLD_EMPTY = 280;    // ms hold after empty before next
+    const TYPE_SPEED = 45;
+    const DELETE_SPEED = 25;
+    const HOLD_FULL = 1400;
+    const HOLD_EMPTY = 280;
     let idx = 0;
 
     function typeWord(word, done) {
@@ -287,17 +300,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function cycle() {
-      const word = ROLES[idx];
+      const roles = getRoles();
+      if (idx >= roles.length) idx = 0;
+      const word = roles[idx];
       typeWord(word, function () {
         deleteWord(function () {
-          idx = (idx + 1) % ROLES.length;
+          idx = (idx + 1) % getRoles().length;
           cycle();
         });
       });
     }
 
-    // Seed visible first word, then start the cycle by deleting it.
-    target.textContent = ROLES[0];
+    target.textContent = getRoles()[0];
     setTimeout(function () {
       deleteWord(function () {
         idx = 1;

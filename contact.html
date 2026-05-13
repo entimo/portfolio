@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Lucas Manivit · SCCM / Intune Engineer</title>
-  <meta name="description" content="Contactez Lucas Manivit — Ingénieur SCCM/Intune en alternance chez SYSTRA, parcours ingénieur Réseaux &amp; Sécurité à ESIEE-IT (promotion 2026). Disponible pour échanger sur des opportunités IT.">
+  <title data-i18n="meta.contact.title">Contact — Lucas Manivit · SCCM / Intune Engineer</title>
+  <meta name="description" data-i18n-content="meta.contact.description" content="Contactez Lucas Manivit — Ingénieur SCCM/Intune en alternance chez SYSTRA, parcours ingénieur Réseaux &amp; Sécurité à ESIEE-IT (promotion 2026). Disponible pour échanger sur des opportunités IT.">
   <meta name="author" content="Lucas Manivit">
   <link rel="canonical" href="https://entimo.github.io/portfolio/contact.html">
+  <link rel="alternate" hreflang="fr" href="https://entimo.github.io/portfolio/contact.html">
+  <link rel="alternate" hreflang="en" href="https://entimo.github.io/portfolio/contact.html?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://entimo.github.io/portfolio/contact.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact — Lucas Manivit">
-  <meta property="og:description" content="Disponible pour échanger sur des opportunités IT (SCCM, Intune, Réseaux &amp; Sécurité).">
+  <meta property="og:title" data-i18n-content="meta.contact.og.title" content="Contact — Lucas Manivit">
+  <meta property="og:description" data-i18n-content="meta.contact.og.description" content="Disponible pour échanger sur des opportunités IT (SCCM, Intune, Réseaux &amp; Sécurité).">
   <meta property="og:url" content="https://entimo.github.io/portfolio/contact.html">
   <meta property="og:image" content="https://entimo.github.io/portfolio/assets/profil.JPG">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="theme-color" content="#0b0d12">
   <meta name="color-scheme" content="dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,25 +25,32 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/bg-network.css">
   <link rel="stylesheet" href="assets/premium.css">
+  <script src="assets/i18n.js" defer></script>
   <script src="assets/bg-network.js" defer></script>
 </head>
 <body>
 
   <div class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- ========== NAV ========== -->
+  <!-- ========== NAV ========== --><!-- nav inherits same toggle pattern as index/projects -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">Lucas<span>.Manivit</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="index.html#skills">Compétences</a></li>
-      <li><a href="index.html#parcours">Parcours</a></li>
-      <li><a href="projects.html">Projets</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="index.html#skills" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="index.html#parcours" data-i18n="nav.path">Parcours</a></li>
+      <li><a href="projects.html" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav-lang-item">
+        <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle_aria" aria-label="Changer la langue">
+          <button type="button" data-lang="fr" aria-pressed="true" data-i18n-aria="lang.fr_aria" aria-label="Afficher en français">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false" data-i18n-aria="lang.en_aria" aria-label="Switch to English">EN</button>
+        </div>
+      </li>
       <!-- PERSONNALISE ICI — Lien vers ton CV PDF -->
-      <li><a href="CV-Lucas-Manivit.pdf" download class="nav-cta" target="_blank" rel="noopener">CV ↓</a></li>
+      <li><a href="CV-Lucas-Manivit.pdf" download class="nav-cta" target="_blank" rel="noopener" data-i18n="nav.cv">CV ↓</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <button class="nav-hamburger" data-i18n-aria="nav.menu_aria" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -47,8 +59,8 @@
   <section class="section" style="padding-top:8rem; min-height:calc(100vh - 80px)">
     <div class="container">
       <div class="reveal">
-        <span class="section-label">Contact</span>
-        <h2 class="section-title">Travaillons ensemble</h2>
+        <span class="section-label" data-i18n="nav.contact">Contact</span>
+        <h2 class="section-title" data-i18n="contact.title">Travaillons ensemble</h2>
       </div>
 
       <div class="contact-grid">
@@ -62,7 +74,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
               </div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Email</span>
+                <span class="contact-item-label" data-i18n="contact.info.email">Email</span>
                 <a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit" class="contact-item-value">manivit.lucas@gmail.com</a>
               </div>
             </div>
@@ -72,7 +84,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Téléphone</span>
+                <span class="contact-item-label" data-i18n="contact.info.phone">Téléphone</span>
                 <a href="tel:+33778785412" class="contact-item-value">07.78.78.54.12</a>
               </div>
             </div>
@@ -82,8 +94,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Localisation</span>
-                <span class="contact-item-value">Cergy, 95800 — Île-de-France</span>
+                <span class="contact-item-label" data-i18n="contact.info.location">Localisation</span>
+                <span class="contact-item-value" data-i18n="contact.info.location.value">Cergy, 95800 — Île-de-France</span>
               </div>
             </div>
 
@@ -92,8 +104,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
               </div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Poste actuel</span>
-                <span class="contact-item-value">SCCM/Intune Engineer — SYSTRA</span>
+                <span class="contact-item-label" data-i18n="contact.info.role">Poste actuel</span>
+                <span class="contact-item-value" data-i18n="contact.info.role.value">SCCM/Intune Engineer — SYSTRA</span>
               </div>
             </div>
 
@@ -102,19 +114,19 @@
           <div class="availability-badge" style="margin-top:1.5rem">
             <div class="availability-dot"></div>
             <div class="availability-text">
-              Disponible
-              <span>Alternance en cours — Ouvert aux opportunités 2026</span>
+              <span data-i18n="contact.availability.title">Disponible</span>
+              <span data-i18n="contact.availability.desc">Alternance en cours — Ouvert aux opportunités 2026</span>
             </div>
           </div>
 
           <div class="contact-socials" style="margin-top:1.5rem">
-            <a href="https://www.linkedin.com/in/lucas-manivit/" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/lucas-manivit/" class="social-btn" data-i18n-aria="hero.social.linkedin" data-i18n-title="hero.social.linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="https://github.com/entimo" class="social-btn" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+            <a href="https://github.com/entimo" class="social-btn" data-i18n-aria="hero.social.github" data-i18n-title="hero.social.github" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             </a>
-            <a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit" class="social-btn" title="Email">
+            <a href="mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio%20Lucas%20Manivit" class="social-btn" data-i18n-title="hero.social.email" title="Email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
             </a>
           </div>
@@ -125,49 +137,49 @@
           <form id="contact-form" class="contact-form">
             <div class="form-row">
               <div class="form-group">
-                <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
+                <label for="firstname" data-i18n="contact.form.firstname">Prénom</label>
+                <input type="text" id="firstname" name="firstname" data-i18n-placeholder="contact.form.firstname.ph" placeholder="Votre prénom" required>
               </div>
               <div class="form-group">
-                <label for="lastname">Nom</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Votre nom" required>
+                <label for="lastname" data-i18n="contact.form.lastname">Nom</label>
+                <input type="text" id="lastname" name="lastname" data-i18n-placeholder="contact.form.lastname.ph" placeholder="Votre nom" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                <label for="email" data-i18n="contact.form.email">Email</label>
+                <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.email.ph" placeholder="votre@email.com" required>
               </div>
               <div class="form-group">
-                <label for="company">Entreprise</label>
-                <input type="text" id="company" name="company" placeholder="Votre entreprise">
+                <label for="company" data-i18n="contact.form.company">Entreprise</label>
+                <input type="text" id="company" name="company" data-i18n-placeholder="contact.form.company.ph" placeholder="Votre entreprise">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="subject">Sujet</label>
+              <label for="subject" data-i18n="contact.form.subject">Sujet</label>
               <select id="subject" name="subject">
-                <option value="">Sélectionnez un sujet</option>
-                <option value="opportunite">Opportunité professionnelle</option>
-                <option value="projet">Proposition de projet</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="autre">Autre</option>
+                <option value="" data-i18n="contact.form.subject.default">Sélectionnez un sujet</option>
+                <option value="opportunite" data-i18n="contact.form.subject.opp">Opportunité professionnelle</option>
+                <option value="projet" data-i18n="contact.form.subject.project">Proposition de projet</option>
+                <option value="collaboration" data-i18n="contact.form.subject.collab">Collaboration</option>
+                <option value="autre" data-i18n="contact.form.subject.other">Autre</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+              <label for="message" data-i18n="contact.form.message">Message</label>
+              <textarea id="message" name="message" data-i18n-placeholder="contact.form.message.ph" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Envoyer le message
+              <span data-i18n="contact.form.submit">Envoyer le message</span>
             </button>
           </form>
 
-          <div id="form-success" class="form-success">
+          <div id="form-success" class="form-success" data-i18n="contact.form.success">
             ✓ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
           </div>
         </div>
@@ -180,18 +192,18 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <span class="footer-text">© 2026 Lucas Manivit — Tous droits réservés</span>
+        <span class="footer-text" data-i18n="footer.rights">© 2026 Lucas Manivit — Tous droits réservés</span>
         <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
   <!-- Scroll to top -->
-  <button class="scroll-top" aria-label="Retour en haut">
+  <button class="scroll-top" data-i18n-aria="footer.scrolltop_aria" aria-label="Retour en haut">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
