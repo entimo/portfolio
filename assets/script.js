@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // --- Rotating hero role (typewriter) ---
+  rotateHeroRoles(reduceMotion);
+
   // --- Scroll progress bar (GPU via transform scaleX) ---
   const progressBar = document.querySelector('.scroll-progress');
   if (progressBar) {
@@ -171,7 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const projectLabels = {
         'autopilot': 'Déploiement Autopilot zero-touch',
         'powershell-graph': 'Scripts PowerShell · Microsoft Graph',
-        'pentest-final': "Tests d'intrusion — Cartographie & Exploitation (ESIEE-IT 5ᵉ a.)",
+        'pentest-final': "Tests d'intrusion — Cartographie & Exploitation",
+        'ai-endpoint-assistant': "Assistant IA pour endpoint — SCCM / Intune",
+        'flowarchitect-ai': "FlowArchitect AI — Plateforme universelle d'interopérabilité des workflows IA",
+        'patch-intelligence': "Pilotage intelligent des correctifs — Tableau de bord",
+        'ai-malware-lab': "Lab d'analyse de malwares assistée par IA",
         'mpls-vpn': 'Backbone MPLS L3VPN — Projet transverse',
         'ad-secad': 'Active Directory durci — Install, GPO & attaques',
         'malware-analysis': 'Analyse de malware — Statique, dynamique, obfuscation',
@@ -223,5 +230,79 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- Rotating hero role: typewriter effect ---
+  // Cycles through a list of role titles. Respects prefers-reduced-motion
+  // by displaying a static composite label and skipping the animation.
+  function rotateHeroRoles(reduced) {
+    const target = document.getElementById('hero-rotating-role');
+    if (!target) return;
+
+    const ROLES = [
+      'Ingénieur SCCM / Intune',
+      'Ingénieur Réseaux & Sécurité',
+      'Expert Automatisation & IA',
+      'Endpoint Engineering Specialist',
+      'AI-Enhanced IT Operations',
+      'Infrastructure & Cybersecurity Engineer'
+    ];
+
+    if (reduced) {
+      target.textContent = 'Ingénieur SCCM / Intune · Réseaux & Sécurité · Automatisation & IA';
+      return;
+    }
+
+    const TYPE_SPEED = 45;     // ms per char (type)
+    const DELETE_SPEED = 25;   // ms per char (delete)
+    const HOLD_FULL = 1400;    // ms hold after full word
+    const HOLD_EMPTY = 280;    // ms hold after empty before next
+    let idx = 0;
+
+    function typeWord(word, done) {
+      let i = 0;
+      function step() {
+        target.textContent = word.slice(0, ++i);
+        if (i < word.length) {
+          setTimeout(step, TYPE_SPEED);
+        } else {
+          setTimeout(done, HOLD_FULL);
+        }
+      }
+      step();
+    }
+
+    function deleteWord(done) {
+      const current = target.textContent;
+      let i = current.length;
+      function step() {
+        target.textContent = current.slice(0, --i);
+        if (i > 0) {
+          setTimeout(step, DELETE_SPEED);
+        } else {
+          setTimeout(done, HOLD_EMPTY);
+        }
+      }
+      step();
+    }
+
+    function cycle() {
+      const word = ROLES[idx];
+      typeWord(word, function () {
+        deleteWord(function () {
+          idx = (idx + 1) % ROLES.length;
+          cycle();
+        });
+      });
+    }
+
+    // Seed visible first word, then start the cycle by deleting it.
+    target.textContent = ROLES[0];
+    setTimeout(function () {
+      deleteWord(function () {
+        idx = 1;
+        cycle();
+      });
+    }, HOLD_FULL);
+  }
 
 });

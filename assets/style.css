@@ -14,10 +14,11 @@
   --text: #ebedf2;
   --text-soft: #b6bcc8;
   --text-dim: #8088a0;
-  --accent: #4ea2ff;
-  --accent-strong: #79b8ff;
-  --accent-glow: rgba(78, 162, 255, 0.12);
-  --accent-glow-strong: rgba(78, 162, 255, 0.22);
+  --accent: #fb923c;
+  --accent-strong: #fdba74;
+  --accent-glow: rgba(251, 146, 60, 0.12);
+  --accent-glow-strong: rgba(251, 146, 60, 0.22);
+  --accent-deep: #ea7c1f;
   --success: #4ade80;
   --border: rgba(235, 237, 242, 0.07);
   --border-strong: rgba(235, 237, 242, 0.12);

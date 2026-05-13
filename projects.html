@@ -13,11 +13,13 @@
   <meta property="og:url" content="https://entimo.github.io/portfolio/projects.html">
   <meta property="og:image" content="https://entimo.github.io/portfolio/assets/profil.JPG">
   <meta name="theme-color" content="#0b0d12">
+  <meta name="color-scheme" content="dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/bg-network.css">
+  <link rel="stylesheet" href="assets/premium.css">
   <script src="assets/bg-network.js" defer></script>
 </head>
 <body>
@@ -51,6 +53,7 @@
 
       <div class="project-filters reveal">
         <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
         <button class="filter-btn" data-filter="infra">Endpoint &amp; Sécurité OS</button>
         <button class="filter-btn" data-filter="reseaux">Réseaux</button>
         <button class="filter-btn" data-filter="securite">Cybersécurité offensive</button>
@@ -59,6 +62,135 @@
       </div>
 
       <div class="projects-grid">
+
+        <!-- ============================================================
+             PREMIUM AI / AUTOMATION PROJECTS — featured first
+             ============================================================ -->
+
+        <!-- Projet AI 1 — Endpoint Assistant -->
+        <div class="project-card project-card-featured reveal" data-category="ai">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <span class="featured-status lab">Lab · Prototype</span>
+          </div>
+          <h3 class="project-title">Assistant IA pour endpoint — SCCM / Intune</h3>
+          <p class="project-desc">
+            Assistant IA local connecté aux logs SCCM/Intune et à Microsoft Graph. Analyse les incidents,
+            interprète les journaux, propose des remédiations PowerShell et accompagne les équipes support N2/N3 —
+            avec validation humaine avant exécution.
+          </p>
+          <div class="project-tags">
+            <span class="tag">OpenAI API</span>
+            <span class="tag">Local LLM</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Graph API</span>
+            <span class="tag">Python</span>
+            <span class="tag">MCP</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=ai-endpoint-assistant" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet AI 2 — FlowArchitect AI -->
+        <div class="project-card project-card-featured reveal" data-category="ai">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><line x1="8" y1="6" x2="10.6" y2="10.4"/><line x1="16" y1="6" x2="13.4" y2="10.4"/><line x1="8" y1="18" x2="10.6" y2="13.6"/><line x1="16" y1="18" x2="13.4" y2="13.6"/></svg>
+            </div>
+            <span class="featured-status">SaaS · En développement</span>
+          </div>
+          <h3 class="project-title">FlowArchitect AI — Plateforme universelle d'interopérabilité des workflows IA</h3>
+          <p class="project-desc">
+            Plateforme universelle d'interopérabilité de workflows IA et d'automatisation : conversion,
+            analyse, génération et documentation automatique de workflows entre n8n, Make, Zapier
+            et stacks maison. L'objectif : un format pivot et des agents capables d'orchestrer
+            n'importe quelle plateforme.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LLM</span>
+            <span class="tag">Workflow DSL</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Make</span>
+            <span class="tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=flowarchitect-ai" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet AI 3 — Patch Intelligence Dashboard -->
+        <div class="project-card project-card-featured reveal" data-category="ai">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </div>
+            <span class="featured-status lab">Lab · Pipeline</span>
+          </div>
+          <h3 class="project-title">Pilotage intelligent des correctifs — Tableau de bord</h3>
+          <p class="project-desc">
+            Pipeline automatisé de corrélation entre KB Microsoft, données Cyberwatch et conformité endpoint
+            Intune/SCCM. Identifie les postes à risque, les déploiements problématiques et
+            priorise les remédiations — visualisation Power BI.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PowerShell</span>
+            <span class="tag">SCCM</span>
+            <span class="tag">Intune</span>
+            <span class="tag">Cyberwatch</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=patch-intelligence" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet AI 4 — AI-Assisted Malware Analysis Lab -->
+        <div class="project-card project-card-featured reveal" data-category="ai">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            </div>
+            <span class="featured-status lab">Lab · Cybersécurité</span>
+          </div>
+          <h3 class="project-title">Lab d'analyse de malwares assistée par IA</h3>
+          <p class="project-desc">
+            Lab cybersécurité combinant sandbox isolée, parsing forensic, extraction d'IOC et résumé LLM —
+            un workflow où l'IA accélère la lecture des artefacts (strings, imports, network, registry)
+            sans remplacer le jugement de l'analyste.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Sandbox</span>
+            <span class="tag">IOC extraction</span>
+            <span class="tag">LLM summarization</span>
+            <span class="tag">Forensic</span>
+            <span class="tag">Python</span>
+            <span class="tag">YARA</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=ai-malware-lab" class="project-link">
+              Échanger sur ce projet
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             EXISTING PROJECTS (production & academic)
+             ============================================================ -->
 
         <!-- Projet 1 -->
         <div class="project-card reveal" data-category="infra">
@@ -124,7 +256,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT 5ᵉ a.</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Tests d'intrusion — Cartographie &amp; Exploitation</h3>
           <p class="project-desc">
@@ -156,7 +288,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="12" cy="12" r="2.5"/><line x1="8.1" y1="7.5" x2="9.9" y2="10.5"/><line x1="15.9" y1="7.5" x2="14.1" y2="10.5"/><line x1="8.1" y1="16.5" x2="9.9" y2="13.5"/><line x1="15.9" y1="16.5" x2="14.1" y2="13.5"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Backbone MPLS L3VPN — Projet transverse (équipe 3p)</h3>
           <p class="project-desc">
@@ -217,7 +349,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 16l9 5 9-5"/><path d="M3 12l9 5 9-5"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Active Directory durci — Install, GPO &amp; attaques</h3>
           <p class="project-desc">
@@ -246,7 +378,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Analyse de malware — Statique, dynamique, obfuscation</h3>
           <p class="project-desc">
@@ -275,7 +407,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Secure Boot UEFI — Windows, Linux &amp; administration Intune</h3>
           <p class="project-desc">
@@ -304,7 +436,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">Provisionnement VM Proxmox via Ansible (IaC)</h3>
           <p class="project-desc">
@@ -333,7 +465,7 @@
             <div class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M18 10a5 5 0 00-9.6-1.5A4 4 0 003 12.5 4 4 0 007 17h11a4 4 0 000-8z"/></svg>
             </div>
-            <span class="featured-status academic">Académique · ESIEE-IT</span>
+            <span class="featured-status academic">Projet d'ingénieur · ESIEE-IT</span>
           </div>
           <h3 class="project-title">OpenStack — Déploiement d'un cloud privé</h3>
           <p class="project-desc">
