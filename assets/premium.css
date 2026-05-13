@@ -14,22 +14,22 @@
 
 .lang-toggle {
   display: inline-flex;
-  align-items: stretch;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 2px;
-  gap: 0;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  gap: 0.15rem;
 }
 
 .lang-toggle button {
+  -webkit-appearance: none;
   appearance: none;
   border: 0;
   background: transparent;
   color: var(--text-dim);
-  font: 600 0.75rem/1 var(--font-mono);
-  letter-spacing: 0.06em;
-  padding: 0.35rem 0.7rem;
+  font: 600 0.72rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  padding: 0.32rem 0.6rem;
   border-radius: 999px;
   cursor: pointer;
   transition: color 0.2s ease, background 0.2s ease;
