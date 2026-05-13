@@ -233,10 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Rotating hero role: typewriter effect ---
   // Reads the active roles list from window.__portfolioRoles (set by i18n.js).
-  // Falls back to FR roles if i18n.js failed to load. Respects
-  // prefers-reduced-motion by showing the i18n fallback string and skipping
-  // the typewriter loop. Listens to "i18n:lang-changed" so a language switch
-  // mid-cycle picks up the new roles list on the next role.
+  // Restarts instantly when "i18n:lang-changed" fires so a language switch
+  // is visible immediately rather than only on the next role boundary.
   function rotateHeroRoles(reduced) {
     const target = document.getElementById('hero-rotating-role');
     if (!target) return;
@@ -270,54 +268,83 @@ document.addEventListener('DOMContentLoaded', () => {
     const DELETE_SPEED = 25;
     const HOLD_FULL = 1400;
     const HOLD_EMPTY = 280;
+
+    // Generation counter — every running setTimeout chain checks if it's
+    // still on the current generation; when language changes we bump the
+    // counter so all in-flight chains die quietly.
+    let generation = 0;
     let idx = 0;
 
-    function typeWord(word, done) {
+    function typeWord(gen, word, done) {
       let i = 0;
       function step() {
+        if (gen !== generation) return;
         target.textContent = word.slice(0, ++i);
         if (i < word.length) {
           setTimeout(step, TYPE_SPEED);
         } else {
-          setTimeout(done, HOLD_FULL);
+          setTimeout(function () {
+            if (gen !== generation) return;
+            done();
+          }, HOLD_FULL);
         }
       }
       step();
     }
 
-    function deleteWord(done) {
+    function deleteWord(gen, done) {
       const current = target.textContent;
       let i = current.length;
       function step() {
+        if (gen !== generation) return;
         target.textContent = current.slice(0, --i);
         if (i > 0) {
           setTimeout(step, DELETE_SPEED);
         } else {
-          setTimeout(done, HOLD_EMPTY);
+          setTimeout(function () {
+            if (gen !== generation) return;
+            done();
+          }, HOLD_EMPTY);
         }
       }
       step();
     }
 
-    function cycle() {
+    function cycle(gen) {
+      if (gen !== generation) return;
       const roles = getRoles();
       if (idx >= roles.length) idx = 0;
       const word = roles[idx];
-      typeWord(word, function () {
-        deleteWord(function () {
+      typeWord(gen, word, function () {
+        deleteWord(gen, function () {
           idx = (idx + 1) % getRoles().length;
-          cycle();
+          cycle(gen);
         });
       });
     }
 
-    target.textContent = getRoles()[0];
-    setTimeout(function () {
-      deleteWord(function () {
-        idx = 1;
-        cycle();
-      });
-    }, HOLD_FULL);
+    function startFresh() {
+      generation++;
+      idx = 0;
+      const gen = generation;
+      const roles = getRoles();
+      target.textContent = roles[0];
+      setTimeout(function () {
+        if (gen !== generation) return;
+        deleteWord(gen, function () {
+          idx = 1;
+          cycle(gen);
+        });
+      }, HOLD_FULL);
+    }
+
+    startFresh();
+
+    // Restart immediately on language switch so the visible word matches
+    // the new language right away.
+    window.addEventListener('i18n:lang-changed', function () {
+      startFresh();
+    });
   }
 
 });
