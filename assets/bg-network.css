@@ -1,0 +1,189 @@
+/* ============================================
+   ANIMATED NETWORK BACKGROUND — V2
+   Multi-layer depth, mouse parallax, traveling
+   light packets, breathing glow, abstract clusters.
+   Sober. Enterprise. Almost invisible — but alive.
+   ============================================ */
+
+.bg-network {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+  animation: bg-breathe 22s ease-in-out infinite;
+}
+
+/* Soft radial glow centered upper viewport: a faint "data center light" */
+.bg-network::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 55% at 50% 0%,
+    rgba(251, 146, 60, 0.07),
+    transparent 65%
+  );
+  animation: bg-glow 16s ease-in-out infinite;
+}
+
+/* A second very subtle glow lower-right for asymmetry */
+.bg-network::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 50% 35% at 85% 88%,
+    rgba(251, 146, 60, 0.04),
+    transparent 60%
+  );
+}
+
+/* Each layer is an absolutely-positioned wrapper holding one SVG.
+   Layers translate independently via --px/--py CSS vars (set in JS). */
+.bg-network__layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  transform: translate3d(var(--px, 0), var(--py, 0), 0);
+  transition: transform 0.35s cubic-bezier(.18,.7,.25,1);
+}
+
+.bg-network__layer svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---- depth-tier styling ---- */
+/* Far layer: ultra faint, biggest parallax range */
+.bg-network__layer--far .net-line       { stroke-opacity: 0.06; stroke-width: 0.4; }
+.bg-network__layer--far .net-node       { fill-opacity: 0.14; }
+.bg-network__layer--far .net-node--halo { fill-opacity: 0.025; }
+
+/* Mid layer: baseline (original look) */
+.bg-network__layer--mid .net-line       { stroke-opacity: 0.10; stroke-width: 0.5; }
+.bg-network__layer--mid .net-node       { fill-opacity: 0.28; }
+.bg-network__layer--mid .net-node--halo { fill-opacity: 0.055; }
+
+/* Near layer: sharper, but very few elements (cluster only) */
+.bg-network__layer--near .net-line       { stroke-opacity: 0.14; stroke-width: 0.6; }
+.bg-network__layer--near .net-node       { fill-opacity: 0.42; }
+.bg-network__layer--near .net-node--halo { fill-opacity: 0.09; }
+
+/* ---- generic primitives ---- */
+.bg-network .net-line {
+  stroke: var(--accent, #fb923c);
+  stroke-linecap: round;
+  fill: none;
+}
+
+.bg-network .net-line--scan {
+  stroke: var(--accent-strong, #fdba74);
+  stroke-width: 0.9;
+  stroke-opacity: 0;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 70 700;
+  animation: bg-net-scan 19s linear infinite;
+}
+.bg-network .net-line--scan.s2 { animation-duration: 24s; animation-delay: -8s; stroke-width: 0.7; }
+.bg-network .net-line--scan.s3 { animation-duration: 16s; animation-delay: -3s; stroke-width: 1; }
+.bg-network .net-line--scan.s4 { animation-duration: 28s; animation-delay: -12s; stroke-width: 0.75; }
+.bg-network .net-line--scan.s5 { animation-duration: 21s; animation-delay: -5s; stroke-width: 0.85; }
+
+.bg-network .net-node {
+  fill: var(--accent, #fb923c);
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: bg-net-pulse 7s ease-in-out infinite;
+}
+
+.bg-network .net-node--halo {
+  fill: var(--accent, #fb923c);
+  animation: bg-net-halo 7s ease-in-out infinite;
+}
+
+/* Travelling light packets — small circles riding along edges via animateMotion */
+.bg-network .net-packet {
+  fill: var(--accent-strong, #fdba74);
+  fill-opacity: 0.85;
+  filter: drop-shadow(0 0 2px rgba(251, 146, 60, 0.6));
+}
+
+/* Stagger pulses across 10+ nodes so they never blink in sync */
+.bg-network .net-node.n1,  .bg-network .net-node--halo.n1  { animation-delay: -0.4s; animation-duration: 7s; }
+.bg-network .net-node.n2,  .bg-network .net-node--halo.n2  { animation-delay: -2.1s; animation-duration: 8s; }
+.bg-network .net-node.n3,  .bg-network .net-node--halo.n3  { animation-delay: -4.3s; animation-duration: 6s; }
+.bg-network .net-node.n4,  .bg-network .net-node--halo.n4  { animation-delay: -1.2s; animation-duration: 9s; }
+.bg-network .net-node.n5,  .bg-network .net-node--halo.n5  { animation-delay: -5.0s; animation-duration: 7.5s; }
+.bg-network .net-node.n6,  .bg-network .net-node--halo.n6  { animation-delay: -3.5s; animation-duration: 8.5s; }
+.bg-network .net-node.n7,  .bg-network .net-node--halo.n7  { animation-delay: -0.9s; animation-duration: 6.5s; }
+.bg-network .net-node.n8,  .bg-network .net-node--halo.n8  { animation-delay: -2.7s; animation-duration: 7.2s; }
+.bg-network .net-node.n9,  .bg-network .net-node--halo.n9  { animation-delay: -4.8s; animation-duration: 8.8s; }
+.bg-network .net-node.n10, .bg-network .net-node--halo.n10 { animation-delay: -1.6s; animation-duration: 6.8s; }
+.bg-network .net-node.n11, .bg-network .net-node--halo.n11 { animation-delay: -3.0s; animation-duration: 7.6s; }
+.bg-network .net-node.n12, .bg-network .net-node--halo.n12 { animation-delay: -0.2s; animation-duration: 8.2s; }
+.bg-network .net-node.n13, .bg-network .net-node--halo.n13 { animation-delay: -4.0s; animation-duration: 6.9s; }
+.bg-network .net-node.n14, .bg-network .net-node--halo.n14 { animation-delay: -2.5s; animation-duration: 7.8s; }
+.bg-network .net-node.n15, .bg-network .net-node--halo.n15 { animation-delay: -5.5s; animation-duration: 6.4s; }
+.bg-network .net-node.n16, .bg-network .net-node--halo.n16 { animation-delay: -1.0s; animation-duration: 8.4s; }
+.bg-network .net-node.n17, .bg-network .net-node--halo.n17 { animation-delay: -3.8s; animation-duration: 7.1s; }
+.bg-network .net-node.n18, .bg-network .net-node--halo.n18 { animation-delay: -0.7s; animation-duration: 8.7s; }
+
+/* ---- keyframes ---- */
+@keyframes bg-net-pulse {
+  0%, 100% { fill-opacity: var(--pulse-min, 0.22); }
+  50%      { fill-opacity: var(--pulse-max, 0.55); }
+}
+@keyframes bg-net-halo {
+  0%, 100% { fill-opacity: var(--halo-min, 0.03); }
+  50%      { fill-opacity: var(--halo-max, 0.10); }
+}
+@keyframes bg-net-scan {
+  0%   { stroke-dashoffset: 770;  stroke-opacity: 0; }
+  10%  { stroke-opacity: 0.30; }
+  50%  { stroke-opacity: 0.34; }
+  90%  { stroke-opacity: 0.22; }
+  100% { stroke-dashoffset: 0;    stroke-opacity: 0; }
+}
+
+/* Whole-bg breathing — opacity oscillates very slowly */
+@keyframes bg-breathe {
+  0%, 100% { opacity: 0.92; }
+  50%      { opacity: 1.0; }
+}
+@keyframes bg-glow {
+  0%, 100% { opacity: 0.88; transform: scale(1); }
+  50%      { opacity: 1.0;  transform: scale(1.03); }
+}
+
+/* ---- accessibility / motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .bg-network,
+  .bg-network::before,
+  .bg-network__layer,
+  .bg-network .net-node,
+  .bg-network .net-node--halo,
+  .bg-network .net-line--scan,
+  .bg-network .net-packet {
+    animation: none !important;
+    transition: none !important;
+  }
+  .bg-network__layer { transform: none !important; }
+  .bg-network .net-node      { fill-opacity: 0.35; }
+  .bg-network .net-node--halo{ fill-opacity: 0.07; }
+  .bg-network .net-line--scan{ stroke-opacity: 0.18; }
+}
+
+/* ---- responsive dimming ---- */
+@media (max-width: 640px) {
+  .bg-network__layer--far { display: none; } /* spare the GPU on phones */
+  .bg-network__layer--mid .net-line       { stroke-opacity: 0.07; }
+  .bg-network__layer--mid .net-node       { fill-opacity: 0.18; }
+  .bg-network__layer--near .net-line      { stroke-opacity: 0.10; }
+  .bg-network__layer--near .net-node      { fill-opacity: 0.30; }
+}
