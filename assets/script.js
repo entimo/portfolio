@@ -232,13 +232,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Rotating hero role: typewriter effect ---
-  // Cycles through a list of role titles. Respects prefers-reduced-motion
-  // by displaying a static composite label and skipping the animation.
+  // Reads the active roles list from window.__portfolioRoles (set by i18n.js).
+  // Restarts instantly when "i18n:lang-changed" fires so a language switch
+  // is visible immediately rather than only on the next role boundary.
   function rotateHeroRoles(reduced) {
     const target = document.getElementById('hero-rotating-role');
     if (!target) return;
 
-    const ROLES = [
+    const FALLBACK_ROLES = [
       'Ingénieur SCCM / Intune',
       'Ingénieur Environnement de Travail',
       'Ingénieur Réseaux & Sécurité',
@@ -247,63 +248,103 @@ document.addEventListener('DOMContentLoaded', () => {
       'AI-Enhanced IT Operations',
       'Infrastructure & Cybersecurity Engineer'
     ];
+    const FALLBACK_REDUCED = 'Ingénieur SCCM / Intune · Environnement de travail · Réseaux & Sécurité · Automatisation & IA';
+
+    function getRoles() {
+      return (window.__portfolioRoles && window.__portfolioRoles.length)
+        ? window.__portfolioRoles
+        : FALLBACK_ROLES;
+    }
 
     if (reduced) {
-      target.textContent = 'Ingénieur SCCM / Intune · Environnement de travail · Réseaux & Sécurité · Automatisation & IA';
+      target.textContent = window.__portfolioRotatorFallback || FALLBACK_REDUCED;
+      window.addEventListener('i18n:lang-changed', function (e) {
+        target.textContent = (e.detail && e.detail.fallback) || FALLBACK_REDUCED;
+      });
       return;
     }
 
-    const TYPE_SPEED = 45;     // ms per char (type)
-    const DELETE_SPEED = 25;   // ms per char (delete)
-    const HOLD_FULL = 1400;    // ms hold after full word
-    const HOLD_EMPTY = 280;    // ms hold after empty before next
+    const TYPE_SPEED = 45;
+    const DELETE_SPEED = 25;
+    const HOLD_FULL = 1400;
+    const HOLD_EMPTY = 280;
+
+    // Generation counter — every running setTimeout chain checks if it's
+    // still on the current generation; when language changes we bump the
+    // counter so all in-flight chains die quietly.
+    let generation = 0;
     let idx = 0;
 
-    function typeWord(word, done) {
+    function typeWord(gen, word, done) {
       let i = 0;
       function step() {
+        if (gen !== generation) return;
         target.textContent = word.slice(0, ++i);
         if (i < word.length) {
           setTimeout(step, TYPE_SPEED);
         } else {
-          setTimeout(done, HOLD_FULL);
+          setTimeout(function () {
+            if (gen !== generation) return;
+            done();
+          }, HOLD_FULL);
         }
       }
       step();
     }
 
-    function deleteWord(done) {
+    function deleteWord(gen, done) {
       const current = target.textContent;
       let i = current.length;
       function step() {
+        if (gen !== generation) return;
         target.textContent = current.slice(0, --i);
         if (i > 0) {
           setTimeout(step, DELETE_SPEED);
         } else {
-          setTimeout(done, HOLD_EMPTY);
+          setTimeout(function () {
+            if (gen !== generation) return;
+            done();
+          }, HOLD_EMPTY);
         }
       }
       step();
     }
 
-    function cycle() {
-      const word = ROLES[idx];
-      typeWord(word, function () {
-        deleteWord(function () {
-          idx = (idx + 1) % ROLES.length;
-          cycle();
+    function cycle(gen) {
+      if (gen !== generation) return;
+      const roles = getRoles();
+      if (idx >= roles.length) idx = 0;
+      const word = roles[idx];
+      typeWord(gen, word, function () {
+        deleteWord(gen, function () {
+          idx = (idx + 1) % getRoles().length;
+          cycle(gen);
         });
       });
     }
 
-    // Seed visible first word, then start the cycle by deleting it.
-    target.textContent = ROLES[0];
-    setTimeout(function () {
-      deleteWord(function () {
-        idx = 1;
-        cycle();
-      });
-    }, HOLD_FULL);
+    function startFresh() {
+      generation++;
+      idx = 0;
+      const gen = generation;
+      const roles = getRoles();
+      target.textContent = roles[0];
+      setTimeout(function () {
+        if (gen !== generation) return;
+        deleteWord(gen, function () {
+          idx = 1;
+          cycle(gen);
+        });
+      }, HOLD_FULL);
+    }
+
+    startFresh();
+
+    // Restart immediately on language switch so the visible word matches
+    // the new language right away.
+    window.addEventListener('i18n:lang-changed', function () {
+      startFresh();
+    });
   }
 
 });
