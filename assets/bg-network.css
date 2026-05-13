@@ -1,0 +1,117 @@
+/* ============================================
+   ANIMATED NETWORK BACKGROUND
+   Sober, professional, infrastructure-style.
+   Sits behind .container content, above body::before grid.
+   ============================================ */
+
+.bg-network {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+}
+
+.bg-network::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(78, 162, 255, 0.055),
+    transparent 65%
+  );
+}
+
+.bg-network svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.bg-network .net-line {
+  stroke: var(--accent, #4ea2ff);
+  stroke-width: 0.5;
+  stroke-opacity: 0.09;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.bg-network .net-line--scan {
+  stroke: var(--accent-strong, #79b8ff);
+  stroke-width: 0.8;
+  stroke-opacity: 0;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 60 600;
+  animation: bg-net-scan 18s linear infinite;
+}
+
+.bg-network .net-line--scan.s2 { animation-duration: 22s; animation-delay: -7s; }
+.bg-network .net-line--scan.s3 { animation-duration: 15s; animation-delay: -3s; }
+.bg-network .net-line--scan.s4 { animation-duration: 26s; animation-delay: -11s; }
+
+.bg-network .net-node {
+  fill: var(--accent, #4ea2ff);
+  fill-opacity: 0.25;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: bg-net-pulse 7s ease-in-out infinite;
+}
+
+.bg-network .net-node--halo {
+  fill: var(--accent, #4ea2ff);
+  fill-opacity: 0.05;
+  animation: bg-net-halo 7s ease-in-out infinite;
+}
+
+/* Stagger node pulses so they don't all blink in sync */
+.bg-network .net-node.n1, .bg-network .net-node--halo.n1 { animation-delay: -0.4s; animation-duration: 7s; }
+.bg-network .net-node.n2, .bg-network .net-node--halo.n2 { animation-delay: -2.1s; animation-duration: 8s; }
+.bg-network .net-node.n3, .bg-network .net-node--halo.n3 { animation-delay: -4.3s; animation-duration: 6s; }
+.bg-network .net-node.n4, .bg-network .net-node--halo.n4 { animation-delay: -1.2s; animation-duration: 9s; }
+.bg-network .net-node.n5, .bg-network .net-node--halo.n5 { animation-delay: -5.0s; animation-duration: 7.5s; }
+.bg-network .net-node.n6, .bg-network .net-node--halo.n6 { animation-delay: -3.5s; animation-duration: 8.5s; }
+.bg-network .net-node.n7, .bg-network .net-node--halo.n7 { animation-delay: -0.9s; animation-duration: 6.5s; }
+.bg-network .net-node.n8, .bg-network .net-node--halo.n8 { animation-delay: -2.7s; animation-duration: 7.2s; }
+.bg-network .net-node.n9, .bg-network .net-node--halo.n9 { animation-delay: -4.8s; animation-duration: 8.8s; }
+.bg-network .net-node.n10, .bg-network .net-node--halo.n10 { animation-delay: -1.6s; animation-duration: 6.8s; }
+
+@keyframes bg-net-pulse {
+  0%, 100% { fill-opacity: 0.22; }
+  50%      { fill-opacity: 0.55; }
+}
+
+@keyframes bg-net-halo {
+  0%, 100% { fill-opacity: 0.03; }
+  50%      { fill-opacity: 0.10; }
+}
+
+@keyframes bg-net-scan {
+  0%   { stroke-dashoffset: 660;  stroke-opacity: 0; }
+  10%  { stroke-opacity: 0.28; }
+  50%  { stroke-opacity: 0.32; }
+  90%  { stroke-opacity: 0.20; }
+  100% { stroke-dashoffset: 0;    stroke-opacity: 0; }
+}
+
+/* Accessibility: respect user motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .bg-network .net-node,
+  .bg-network .net-node--halo,
+  .bg-network .net-line--scan {
+    animation: none;
+  }
+  .bg-network .net-node       { fill-opacity: 0.35; }
+  .bg-network .net-node--halo { fill-opacity: 0.07; }
+  .bg-network .net-line--scan { stroke-opacity: 0.18; }
+}
+
+/* On very small screens, dim further so the network never competes with copy */
+@media (max-width: 640px) {
+  .bg-network .net-line       { stroke-opacity: 0.07; }
+  .bg-network .net-node       { fill-opacity: 0.18; }
+}
