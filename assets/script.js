@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'powershell-graph': 'Scripts PowerShell · Microsoft Graph',
         'pentest-final': "Tests d'intrusion — Cartographie & Exploitation",
         'ai-endpoint-assistant': "Assistant IA pour endpoint — SCCM / Intune",
-        'flowarchitect-ai': "FlowArchitect AI — Plateforme universelle d'interopérabilité des workflows IA",
+        'orkestra-ia': "Orkestra IA — Orchestration & gouvernance des agents IA",
         'patch-intelligence': "Pilotage intelligent des correctifs — Tableau de bord",
         'ai-malware-lab': "Lab d'analyse de malwares assistée par IA",
         'mpls-vpn': 'Backbone MPLS L3VPN — Projet transverse',
@@ -196,15 +196,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    form.addEventListener('submit', (e) => {
+    // Real submission via FormSubmit.co (no backend, no signup) -> manivit.lucas@gmail.com
+    // First submission triggers a one-time activation email to the inbox owner.
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/manivit.lucas@gmail.com';
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      form.style.display = 'none';
-      formSuccess.classList.add('show');
-      setTimeout(() => {
-        form.style.display = '';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtn = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '0.7'; }
+      try {
+        const resp = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        form.style.display = 'none';
+        formSuccess.classList.add('show');
         form.reset();
-        formSuccess.classList.remove('show');
-      }, 4000);
+      } catch (err) {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ''; submitBtn.innerHTML = originalBtn; }
+        window.location.href = 'mailto:manivit.lucas@gmail.com?subject=Prise%20de%20contact%20-%20Portfolio';
+      }
     });
   }
 
