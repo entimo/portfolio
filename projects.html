@@ -71,6 +71,7 @@
         <button class="filter-btn" data-filter="securite" data-i18n="pjs.filter.sec">Cybersécurité offensive</button>
         <button class="filter-btn" data-filter="scripts" data-i18n="pjs.filter.scripts">Automation</button>
         <button class="filter-btn" data-filter="cloud" data-i18n="pjs.filter.cloud">Cloud &amp; Virtualisation</button>
+        <button class="filter-btn" data-filter="autre" data-i18n="pjs.filter.other">Autre</button>
       </div>
 
       <div class="projects-grid">
@@ -501,6 +502,260 @@
           </div>
           <div class="project-links">
             <a href="contact.html?project=openstack" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 11 — VoIP Asterisk -->
+        <div class="project-card reveal" data-category="reseaux">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.voip.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.voip.title">Téléphonie sur IP — IPBX Asterisk (SIP)</h3>
+          <p class="project-desc" data-i18n="pjs.voip.desc">Déploiement d'une téléphonie d'entreprise sur deux serveurs Asterisk : enregistrement des utilisateurs SIP, messagerie vocale, routage d'appels et interconnexion des IPBX par trunk SIP, avec analyse des échanges au niveau trame sous Wireshark.</p>
+          <div class="project-tags">
+            <span class="tag">Asterisk</span>
+            <span class="tag">SIP</span>
+            <span class="tag">Trunk SIP</span>
+            <span class="tag">VoIP</span>
+            <span class="tag">Wireshark</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=voip" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 12 — WiFi WPA2-Enterprise -->
+        <div class="project-card reveal" data-category="reseaux">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.wifi.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.wifi.title">Wi-Fi sécurisé WPA2-Enterprise (802.1X / RADIUS)</h3>
+          <p class="project-desc" data-i18n="pjs.wifi.desc">Architecture Wi-Fi d'entreprise durcie : serveur FreeRADIUS (AAA) sous Linux, point d'accès WPA2-Enterprise via hostapd, client wpa_supplicant, validation par radtest et analyse des attributs RADIUS sous Wireshark — l'accès réseau sécurisé par 802.1X plutôt qu'une clé partagée.</p>
+          <div class="project-tags">
+            <span class="tag">FreeRADIUS</span>
+            <span class="tag">802.1X</span>
+            <span class="tag">WPA2-Enterprise</span>
+            <span class="tag">hostapd</span>
+            <span class="tag">EAP</span>
+            <span class="tag">Wireshark</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=wifi" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 13 — Docker / Kubernetes -->
+        <div class="project-card reveal" data-category="cloud">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.k8s.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.k8s.title">Conteneurisation &amp; orchestration — Docker / Kubernetes</h3>
+          <p class="project-desc" data-i18n="pjs.k8s.desc">Cycle complet d'orchestration de conteneurs sous Kubernetes : namespaces et contextes, déploiement par manifestes YAML, rolling-update, DaemonSets, volumes, exposition par Ingress et contrôle d'accès RBAC. Une compétence cloud-native directement opérationnelle.</p>
+          <div class="project-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">kubectl</span>
+            <span class="tag">YAML</span>
+            <span class="tag">Ingress</span>
+            <span class="tag">RBAC</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=k8s" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 14 — Pentest Web -->
+        <div class="project-card reveal" data-category="securite">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.pentestweb.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.pentestweb.title">Pentest applicatif web — Injection SQL &amp; exploitation</h3>
+          <p class="project-desc" data-i18n="pjs.pentestweb.desc">Tests d'intrusion applicatifs web : exploitation d'injections SQL, manipulation de requêtes via Burp Suite et abus d'upload de fichiers jusqu'à la compromission, puis recommandations de remédiation. L'angle applicatif, complémentaire du pentest réseau.</p>
+          <div class="project-tags">
+            <span class="tag">Burp Suite</span>
+            <span class="tag">SQLi</span>
+            <span class="tag">OWASP</span>
+            <span class="tag">File upload</span>
+            <span class="tag">Web exploitation</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=pentestweb" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 15 — Mini-Wireshark -->
+        <div class="project-card reveal" data-category="reseaux">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.sniffer.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.sniffer.title">Mini-Wireshark — analyseur réseau en Python (raw sockets)</h3>
+          <p class="project-desc" data-i18n="pjs.sniffer.desc">Analyseur de trafic réseau écrit en Python pur : capture des trames via raw sockets et décodage manuel des en-têtes (Ethernet, IPv4 et plusieurs protocoles), avec affichage hexdump. Une vraie maîtrise du format des protocoles, au-delà des outils tout faits.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Raw sockets</span>
+            <span class="tag">Ethernet</span>
+            <span class="tag">IPv4</span>
+            <span class="tag">struct</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=sniffer" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 16 — iptables automation -->
+        <div class="project-card reveal" data-category="scripts">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.iptables.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.iptables.title">Automatisation du filtrage iptables par SSH (Python)</h3>
+          <p class="project-desc" data-i18n="pjs.iptables.desc">Automatisation de l'administration d'un pare-feu Linux : un client Python lit un fichier de règles iptables et les applique à distance via SSH (paramiko), teste le code retour de chaque commande et journalise les résultats. La base concrète d'une logique Infrastructure-as-Code.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">paramiko</span>
+            <span class="tag">SSH</span>
+            <span class="tag">iptables</span>
+            <span class="tag">Linux</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=iptables" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 17 — Wazuh XDR -->
+        <div class="project-card reveal" data-category="securite">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.wazuh.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.wazuh.title">Détection &amp; réponse — XDR Wazuh (blue team)</h3>
+          <p class="project-desc" data-i18n="pjs.wazuh.desc">Mise en place d'un XDR Wazuh pour la supervision de sécurité d'un environnement Active Directory : collecte et corrélation d'événements, détection d'intrusion et alerting, avec rapport de sécurité. Le pendant défensif (blue team) des projets de pentest.</p>
+          <div class="project-tags">
+            <span class="tag">Wazuh</span>
+            <span class="tag">XDR</span>
+            <span class="tag">SIEM</span>
+            <span class="tag">Détection d'intrusion</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Blue team</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=wazuh" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 18 — Xenomai temps réel -->
+        <div class="project-card reveal" data-category="autre">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.xenomai.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.xenomai.title">Systèmes temps réel sous Xenomai (Linux RT)</h3>
+          <p class="project-desc" data-i18n="pjs.xenomai.desc">Ingénierie système temps réel : compilation d'un noyau Linux patché Xenomai Cobalt, mesure et analyse de la latence d'ordonnancement sous charge (visualisation gnuplot), puis applications temps réel multitâches pilotant du GPIO via l'API Alchemy. Une compétence système rare (déterminisme, noyau) appréciée en environnement industriel/embarqué.</p>
+          <div class="project-tags">
+            <span class="tag">Xenomai</span>
+            <span class="tag">Linux RT</span>
+            <span class="tag">Noyau</span>
+            <span class="tag">Ordonnancement</span>
+            <span class="tag">GPIO</span>
+            <span class="tag">gnuplot</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=xenomai" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 19 — Étude EDR -->
+        <div class="project-card reveal" data-category="autre">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.edr.status">Étude · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.edr.title">Étude de faisabilité — solution EDR pour PME francophones</h3>
+          <p class="project-desc" data-i18n="pjs.edr.desc">Étude produit/marché d'une solution EDR ciblant les PME francophones : analyse concurrentielle (Microsoft Defender, WatchGuard…), positionnement, cible et contraintes. Un travail à la croisée de la cybersécurité et de la stratégie produit.</p>
+          <div class="project-tags">
+            <span class="tag">EDR</span>
+            <span class="tag">Cybersécurité</span>
+            <span class="tag">Étude de marché</span>
+            <span class="tag">Analyse concurrentielle</span>
+            <span class="tag">PME</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=edr" class="project-link">
+              <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 20 — Supervision réseau -->
+        <div class="project-card reveal" data-category="reseaux">
+          <div class="project-head">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 9 9 12 12 8 15 11 18 7"/></svg>
+            </div>
+            <span class="featured-status academic" data-i18n="pjs.supervision.status">Projet d'ingénieur · ESIEE-IT</span>
+          </div>
+          <h3 class="project-title" data-i18n="pjs.supervision.title">Supervision réseau — SNMP, Syslog &amp; traps</h3>
+          <p class="project-desc" data-i18n="pjs.supervision.desc">Mise en place d'une supervision d'infrastructure : collecte d'état par SNMP et WMI, centralisation des journaux via Syslog et remontée d'alertes par traps. La visibilité opérationnelle nécessaire pour exploiter un parc réseau.</p>
+          <div class="project-tags">
+            <span class="tag">SNMP</span>
+            <span class="tag">Syslog</span>
+            <span class="tag">WMI</span>
+            <span class="tag">Traps</span>
+            <span class="tag">Supervision</span>
+          </div>
+          <div class="project-links">
+            <a href="contact.html?project=supervision" class="project-link">
               <span data-i18n="pjs.discuss_link">Échanger sur ce projet</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>

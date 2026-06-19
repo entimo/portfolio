@@ -185,7 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
         'secure-boot': 'Secure Boot UEFI — Windows, Linux & Intune',
         'proxmox-ansible': 'Provisionnement VM Proxmox via Ansible (IaC)',
         'openstack': 'OpenStack — Déploiement cloud privé',
-        'audit-cis': 'Audit sécurité poste de travail (CIS Benchmark)'
+        'audit-cis': 'Audit sécurité poste de travail (CIS Benchmark)',
+        'voip': "Téléphonie sur IP — IPBX Asterisk (SIP)",
+        'wifi': "Wi-Fi sécurisé WPA2-Enterprise (802.1X / RADIUS)",
+        'k8s': "Conteneurisation & orchestration — Docker / Kubernetes",
+        'iptables': "Automatisation du filtrage iptables par SSH (Python)",
+        'sniffer': "Mini-Wireshark — analyseur réseau en Python (raw sockets)",
+        'pentestweb': "Pentest applicatif web — Injection SQL & exploitation",
+        'wazuh': "Détection & réponse — XDR Wazuh (blue team)",
+        'xenomai': "Systèmes temps réel sous Xenomai (Linux RT)",
+        'edr': "Étude de faisabilité — solution EDR pour PME francophones",
+        'supervision': "Supervision réseau — SNMP, Syslog & traps"
       };
       const label = projectLabels[projectSlug] || projectSlug;
       const subjectSelect = document.getElementById('subject');
